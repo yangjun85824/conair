@@ -1,0 +1,23 @@
+server:
+  port: 4567
+#mybatis-plus
+#mybatis-plus:
+#  #xml
+#  mapper-locations: classpath:/mapper/*Mapper.xml
+#  #bean
+#  typeAliasesPackage: com.yyld.conair.ds.test.entity
+#  global-config:
+#    # 3:"UUID";
+#    id-type: 3
+#    field-strategy: 2
+#    db-column-underline: true
+#    key-generator: com.baomidou.mybatisplus.incrementer.OracleKeyGenerator
+#    logic-delete-value: 1
+#    logic-not-delete-value: 0
+##    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    cache-enabled: false
+#    #JdbcTypeForNull
+#    jdbc-type-for-null: 'null'
+#
