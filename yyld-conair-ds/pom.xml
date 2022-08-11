@@ -6,16 +6,22 @@
         <groupId>com.yyld.conair</groupId>
         <artifactId>conair</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.yyld.conair.ds</groupId>
     <artifactId>yyld-conair-ds</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>yyld-conair-ds</name>
     <description>数据源模块</description>
+
+    <packaging>jar</packaging>
+
     <properties>
         <java.version>1.8</java.version>
         <commons.version>0.0.1-SNAPSHOT</commons.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <dependencies>
         <dependency>

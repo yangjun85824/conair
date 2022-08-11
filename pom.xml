@@ -5,8 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.7.2</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.yyld.conair</groupId>
@@ -18,13 +18,12 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>yyld-conair-conaigmanager</module>
         <module>yyld-conair-commons</module>
         <module>yyld-conair-ds</module>
         <module>yyld-conair-config</module>
         <module>yyld-conair-eureka-server</module>
         <module>yyld-conair-crawler</module>
-        <module>conair-config-base</module>
+<!--        <module>conair-config-base</module>-->
 
     </modules>
 
@@ -48,6 +47,10 @@
         <gecco.version>1.3.21</gecco.version>
         <webcollector.version>2.73-alpha</webcollector.version>
         <htmlunit.version>2.63.0</htmlunit.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     </properties>
 
     <dependencies>
@@ -219,11 +222,6 @@
             </dependency>
 
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <optional>true</optional>
@@ -376,6 +374,30 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <fork>true</fork>
+                    <verbose>true</verbose>
+                    <encoding>UTF-8</encoding>
+                    <meminitial>256m</meminitial>
+                    <maxmem>1024m</maxmem>
+                </configuration>
             </plugin>
         </plugins>
         <resources>
@@ -393,4 +415,5 @@
             </resource>
         </resources>
     </build>
+
 </project>

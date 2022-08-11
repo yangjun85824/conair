@@ -23,7 +23,7 @@ import java.util.Map;
  * @Date 2022/1/11 10:01
  * @Vresion 1.0
  **/
-@Component
+//@Component
 public class SQLRelationConditionImpl implements SQLRelationCondition {
 
     private static final Logger log = LoggerFactory.getLogger(SQLRelationConditionImpl.class);

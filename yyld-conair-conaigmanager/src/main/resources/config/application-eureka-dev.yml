@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: yyld-eureka-server
-server:
-  port: 8887 #服务注册中心端口号
-

@@ -1,6 +1,5 @@
 package com.yyld.conair.ds.utils;
 
-import com.yyld.conair.commons.data.utils.SpringContextUtil;
 import com.yyld.conair.ds.mds.druid.AbsDataSources;
 import com.yyld.conair.ds.mds.druid.ext.DefaultDataSources;
 import lombok.extern.slf4j.Slf4j;

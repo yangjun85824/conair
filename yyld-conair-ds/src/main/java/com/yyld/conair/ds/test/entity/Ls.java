@@ -31,7 +31,7 @@ public class Ls extends Model<Ls> {
     private static final long serialVersionUID = 1L;
 
 
-    @TableField("id")
+//    @TableField("id")
     @TableId(type = IdType.ASSIGN_UUID)
     private String id;
 

@@ -4,10 +4,10 @@ package com.yyld.conair.ds.test.controller;
 import com.yyld.conair.ds.config.DataSourceContext;
 import com.yyld.conair.ds.test.entity.Ls;
 import com.yyld.conair.ds.test.service.LsService;
+import com.yyld.conair.ds.test.service.impl.LsServiceImpl;
 import com.yyld.conair.ds.users.entity.Users;
 import com.yyld.conair.ds.users.service.UsersService;
 import com.yyld.conair.ds.utils.CutPictureUtil;
-import org.apache.tomcat.util.http.RequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.yyld.conair.commons.data.utils.SpringContextUtil;
 
 /**
  * <p>
@@ -44,6 +44,8 @@ public class LsController {
     public Map<String, Object> list() {
 
         long starttime = System.currentTimeMillis();
+
+        Object LS = SpringContextUtil.getBean(LsServiceImpl.class);
 
         DataSourceContext.setDataSource("b");
         List<Users> users = usersService.list();

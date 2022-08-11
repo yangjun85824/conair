@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.sleepycat:je:5.0.73">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/sleepycat/je/5.0.73/je-5.0.73.jar!/" />
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/sleepycat/je/5.0.73/je-5.0.73.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/com/sleepycat/je/5.0.73/je-5.0.73-javadoc.jar!/" />
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/sleepycat/je/5.0.73/je-5.0.73-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/sleepycat/je/5.0.73/je-5.0.73-sources.jar!/" />
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/sleepycat/je/5.0.73/je-5.0.73-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

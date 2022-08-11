@@ -1,7 +1,6 @@
 package com.yyld.conair.ds;
 
 import com.yyld.conair.commons.data.utils.SpringContextUtil;
-import com.yyld.conair.ds.utils.DataSourceUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +19,7 @@ public class YyldConairDsApplication {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(YyldConairDsApplication.class, args);
 
         log.info("springboot启动成功");
+
         SpringContextUtil.setApplicationContext(applicationContext);
     }
 

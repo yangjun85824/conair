@@ -26,7 +26,7 @@ public class Users extends Model<Users> {
 
     private static final long serialVersionUID = 1L;
 
-    @TableField("id")
+//    @TableField("id")
     @TableId(type = IdType.ASSIGN_UUID)
     private String id;
 

@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="yyld-conair-conaigmanager" />
-        <module name="yyld-conair-eureka-server" />
+        <module name="yyld-conair-commons" />
         <module name="yyld-conair-crawler" />
+        <module name="yyld-conair-eureka-server" />
         <module name="yyld-conair-config" />
         <module name="yyld-conair-ds" />
-        <module name="yyld-conair-commons" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
       <module name="conair" target="1.8" />
+      <module name="yyld-conair-common" target="1.8" />
       <module name="yyld-conair-commons" target="1.8" />
       <module name="yyld-conair-conaigmanager" target="1.8" />
       <module name="yyld-conair-config" target="1.8" />
+      <module name="yyld-conair-configmanager" target="1.8" />
       <module name="yyld-conair-crawler" target="1.8" />
       <module name="yyld-conair-ds" target="1.8" />
       <module name="yyld-conair-eureka-server" target="1.8" />
@@ -27,9 +28,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="yyld-conair-commons" options="-parameters" />
+      <module name="conair" options="" />
+      <module name="yyld-conair-common" options="-parameters" />
+      <module name="yyld-conair-commons" options="" />
       <module name="yyld-conair-conaigmanager" options="-parameters" />
       <module name="yyld-conair-config" options="-parameters" />
+      <module name="yyld-conair-configmanager" options="-parameters" />
       <module name="yyld-conair-crawler" options="-parameters" />
       <module name="yyld-conair-ds" options="-parameters" />
       <module name="yyld-conair-eureka-server" options="-parameters" />

@@ -4,10 +4,9 @@ import org.springframework.context.ApplicationContext;
 
 /**
  * @Description: 功能描述
- * @Author: shiwei
- * @Date: 8/12/21 2:08 PM
  */
-public class SpringContextUtil {
+public final class SpringContextUtil{
+
     private static ApplicationContext applicationContext;
 
     //获取上下文
@@ -26,7 +25,8 @@ public class SpringContextUtil {
     }
 
     //通过类型获取上下文中的bean
-    public static Object getBean(Class<?> requiredType) {
+    public static <T> T getBean(Class<T> requiredType) {
         return applicationContext.getBean(requiredType);
     }
+
 }
