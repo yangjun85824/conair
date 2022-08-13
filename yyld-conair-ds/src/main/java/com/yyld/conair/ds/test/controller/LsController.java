@@ -3,6 +3,7 @@ package com.yyld.conair.ds.test.controller;
 
 import com.yyld.conair.druid.config.DataSourceContext;
 import com.yyld.conair.ds.test.entity.Ls;
+import com.yyld.conair.ds.test.service.CService;
 import com.yyld.conair.ds.test.service.LsService;
 import com.yyld.conair.ds.test.service.impl.LsServiceImpl;
 import com.yyld.conair.ds.users.entity.Users;
@@ -38,6 +39,8 @@ public class LsController {
     @Autowired
     private LsService service;
     @Autowired
+    private CService cService;
+    @Autowired
     private UsersService usersService;
 
     @GetMapping
@@ -55,6 +58,22 @@ public class LsController {
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("list", list);
         resultMap.put("users", users);
+
+        System.out.println(System.currentTimeMillis() - starttime);
+        return resultMap;
+
+    }
+
+    @GetMapping("/c")
+    public Map<String, Object> oracleListData() {
+
+        long starttime = System.currentTimeMillis();
+
+        DataSourceContext.setDataSource("c");
+        List<Object> objects = cService.list();
+
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("objects", objects);
 
         System.out.println(System.currentTimeMillis() - starttime);
         return resultMap;
