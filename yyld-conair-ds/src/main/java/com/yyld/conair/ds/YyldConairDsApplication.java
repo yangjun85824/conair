@@ -12,8 +12,7 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 @Slf4j
 @EnableOpenApi
 @EnableWebMvc
-//@ComponentScan(basePackages = {"com.yyld.conair.druid.druid.ext"})
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.yyld.conair"})
 public class YyldConairDsApplication {
 
     public static void main(String[] args) {

@@ -1,17 +1,10 @@
-package com.yyld.conair.ds.config;
+package com.yyld.conair.druid.config;
 
-import com.alibaba.druid.support.http.StatViewServlet;
-import com.alibaba.druid.support.http.WebStatFilter;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @ClassName MybatisPlusConfig
@@ -21,7 +14,7 @@ import java.util.Map;
  * @Vresion 1.0
  **/
 @Configuration  //spring中常用到注解，与xml配置相对立。是两种加载bean方式
-@MapperScan({"com.yyld.conair.ds.**.mapper"}) // 扫描mapperdao的地址
+@MapperScan({"com.yyld.conair.**.**.mapper"}) // 扫描mapperdao的地址
 public class MybatisPlusConfig {
 
     // 最新版  分页插件   没有配置这个分页插件的是不可以进行分页的

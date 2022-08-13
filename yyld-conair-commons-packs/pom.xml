@@ -41,6 +41,7 @@
         <slf4j.version>2.0.0-beta1</slf4j.version>
         <commons.lang.version>2.6</commons.lang.version>
         <spring-context.version>5.3.22</spring-context.version>
+        <oracle.version>21.5.0.0</oracle.version>
 
         <commons.version>0.0.1-SNAPSHOT</commons.version>
 
@@ -190,6 +191,13 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring-context.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc8</artifactId>
+                <version>${oracle.version}</version>
+                <scope>runtime</scope>
             </dependency>
 
         </dependencies>
