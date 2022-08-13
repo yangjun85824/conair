@@ -5,12 +5,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 
 @Slf4j
 @EnableOpenApi
 @EnableWebMvc
+//@ComponentScan(basePackages = {"com.yyld.conair.druid.druid.ext"})
 @SpringBootApplication
 public class YyldConairDsApplication {
 

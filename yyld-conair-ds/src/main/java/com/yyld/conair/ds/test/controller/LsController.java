@@ -1,7 +1,7 @@
 package com.yyld.conair.ds.test.controller;
 
 
-import com.yyld.conair.ds.config.DataSourceContext;
+import com.yyld.conair.druid.config.DataSourceContext;
 import com.yyld.conair.ds.test.entity.Ls;
 import com.yyld.conair.ds.test.service.LsService;
 import com.yyld.conair.ds.test.service.impl.LsServiceImpl;

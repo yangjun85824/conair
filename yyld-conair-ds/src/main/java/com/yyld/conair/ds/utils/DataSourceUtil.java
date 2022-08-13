@@ -1,7 +1,7 @@
 package com.yyld.conair.ds.utils;
 
-import com.yyld.conair.ds.mds.druid.AbsDataSources;
-import com.yyld.conair.ds.mds.druid.ext.DefaultDataSources;
+import com.yyld.conair.druid.druid.AbsDataSources;
+import com.yyld.conair.druid.druid.ext.DefaultDataSources;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;

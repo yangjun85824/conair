@@ -24,14 +24,20 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.yyld.conair</groupId>
+            <artifactId>yyld-conair-druid</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.yyld.conair</groupId>
-            <artifactId>yyld-conair-commons</artifactId>
-            <version>${commons.version}</version>
         </dependency>
         <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
@@ -57,37 +63,6 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.exp-blog/jep -->
-        <!--<dependency>
-            <groupId>com.exp-blog</groupId>
-            <artifactId>jep</artifactId>
-            <version>3.4.0</version>
-        </dependency>-->
-
-         <!--https://mvnrepository.com/artifact/io.mateu/lombok
-        <dependency>
-            <groupId>io.mateu</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.11.97</version>
-        </dependency>-->
-
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <!--<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <scope>provided</scope>
-        </dependency>-->
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
         </dependency>
 
         <dependency>
