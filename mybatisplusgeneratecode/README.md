@@ -1,0 +1,4 @@
+# mybatisplusgeneratecode20210118
+mybatis-plus生成代码专用项目
+
+暂时只有生成基本类的功能，后续会进行项目配置

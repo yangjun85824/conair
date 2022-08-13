@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/conair.iml" filepath="$PROJECT_DIR$/conair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatisplusgeneratecode/mybatisplusgeneratecode.iml" filepath="$PROJECT_DIR$/mybatisplusgeneratecode/mybatisplusgeneratecode.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons/yyld-conair-commons.iml" filepath="$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons/yyld-conair-commons.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons-packs.iml" filepath="$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons-packs.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-crawler/yyld-conair-crawler.iml" filepath="$PROJECT_DIR$/yyld-conair-crawler/yyld-conair-crawler.iml" />

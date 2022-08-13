@@ -10,6 +10,7 @@
         <module name="yyld-conair-eureka-server" />
         <module name="yyld-conair-druid" />
         <module name="yyld-conair-pay" />
+        <module name="mybatisplusgeneratecode" />
         <module name="yyld-conair-crawler" />
         <module name="yyld-conair-ds" />
         <module name="yyld-conair-commons" />
@@ -17,6 +18,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="conair" target="1.8" />
+      <module name="mybatisplusgeneratecode" target="1.8" />
       <module name="yyld-conair-commons" target="1.8" />
       <module name="yyld-conair-commons-packs" target="1.8" />
       <module name="yyld-conair-crawler" target="1.8" />
@@ -29,6 +31,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="conair" options="" />
+      <module name="mybatisplusgeneratecode" options="-parameters" />
       <module name="yyld-conair-crawler" options="-parameters" />
       <module name="yyld-conair-ds" options="-parameters" />
       <module name="yyld-conair-eureka-server" options="-parameters" />
