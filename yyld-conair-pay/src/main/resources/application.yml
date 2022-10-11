@@ -1,2 +1,21 @@
 server:
-  port: 1000
+  port: 8787
+  servlet:
+    context-path: /pay
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+  #视图层控制
+#  mvc:
+#    static-path-pattern: /static/**
+#    view:
+#      prefix: classpath:/templates/
+#      suffix: .html
+      

@@ -1,7 +1,9 @@
 package com.yyld.conair.druid.druid.ext;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.yyld.conair.druid.consts.DSConsts;
 import com.yyld.conair.druid.druid.AbsDataSources;
+import com.yyld.conair.druid.entity.DataSourceInfoEntity;
 import com.yyld.conair.druid.utils.DataSourceUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
@@ -95,7 +97,73 @@ public final class DefaultDataSources extends AbsDataSources {
         }
         datasource.setConnectionProperties(properties.getProperty(dsName + "connectionProperties"));
 
+        setDruidDataSources(datasource, properties, dsName);
         return datasource;
 
+    }
+
+    private void setDruidDataSources(DruidDataSource datasource, Properties properties, String dsName) {
+
+        DataSourceInfoEntity entity = new DataSourceInfoEntity();
+
+        if (".".equals(dsName.substring(dsName.length()-1))){
+            dsName = dsName.substring(0,dsName.length()-1);
+        }
+
+        entity.setDsName(dsName);
+        entity.setUrl(datasource.getUrl());
+        entity.setUsername(datasource.getUsername());
+        entity.setPassword(datasource.getPassword());
+        entity.setDriver(datasource.getDriverClassName());
+
+        entity.setType(DSConsts.DBTYPE_.get(datasource.getDriverClassName()));
+
+        entity.setInitialSize(datasource.getInitialSize());
+        entity.setMinIdle(datasource.getMinIdle());
+        entity.setMaxActive(datasource.getMaxActive());
+        entity.setMaxWait(datasource.getMaxWait());
+        entity.setTimeBetweenEvictionRunsMillis(datasource.getTimeBetweenLogStatsMillis());
+        entity.setMinEvictableIdleTimeMillis(datasource.getMinEvictableIdleTimeMillis());
+        entity.setValidationQuery(datasource.getValidationQuery());
+
+        datasource.setValidationQuery(properties.getProperty(dsName + "validationQuery"));
+        String testWhileIdle = properties.getProperty(dsName + "testWhileIdle");
+        if ("true".equals(testWhileIdle)) {
+            entity.setTestWhileIdle(true);
+        }
+        if ("false".equals(testWhileIdle)) {
+            entity.setTestWhileIdle(false);
+        }
+        String testOnBorrow = properties.getProperty(dsName + "testOnBorrow");
+        if ("true".equals(testOnBorrow)) {
+            entity.setTestOnBorrow(true);
+        }
+        if ("false".equals(testOnBorrow)) {
+            entity.setTestOnBorrow(false);
+        }
+        String testOnReturn = properties.getProperty(dsName + "testOnReturn");
+        if ("true".equals(testOnReturn)) {
+            entity.setTestOnReturn(true);
+        }
+        if ("false".equals(testOnReturn)) {
+            entity.setTestOnReturn(false);
+        }
+        String poolPreparedStatements = properties.getProperty(dsName + "poolPreparedStatements");
+        if ("true".equals(poolPreparedStatements)) {
+            entity.setPoolPreparedStatements(true);
+        }
+        if ("false".equals(poolPreparedStatements)) {
+            entity.setPoolPreparedStatements(false);
+        }
+
+        if (properties.getProperty(dsName + "maxPoolPreparedStatementPerConnectionSize") != null) {
+            entity.setMaxPoolPreparedStatementPerConnectionSize(Integer.parseInt(properties.getProperty(dsName + "maxPoolPreparedStatementPerConnectionSize")));
+        }
+
+        entity.setFilters(properties.getProperty(dsName + "filters"));
+
+        entity.setConnectionProperties(properties.getProperty(dsName + "connectionProperties"));
+
+        DataSourceUtil.entityList.add(entity);
     }
 }

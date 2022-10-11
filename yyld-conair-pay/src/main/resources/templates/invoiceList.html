@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试发票</title>
+    <style>
+        p{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); ">
+    <p th:text="${list.userId}"></p>
+    <p th:each="item,listStat:${list.invoiceElementList}">
+        <span th:text="${item.invoiceCode}"></span>
+        <span th:text="${item.invoiceNo}"></span>
+        <span th:text="${item.payerName}"></span>
+        <span th:text="${item.pdfUrl}"></span>
+        <span><a th:href="${item.invoiceImgUrl}">发票图片</a></span>
+        <span><a th:href="@{'/pay/invoice/invoiceInfoPull?access_token='+${access_token}+'&user_id='+${list.userId}+'&invoice_code='+${item.invoiceCode}+'&invoice_no='+${invoiceNo}}"> 摘 取 发 票 </a></span>
+    </p>
+</div>
+</body>
+</html>

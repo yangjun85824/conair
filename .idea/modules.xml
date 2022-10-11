@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-crawler/yyld-conair-crawler.iml" filepath="$PROJECT_DIR$/yyld-conair-crawler/yyld-conair-crawler.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-druid/yyld-conair-druid.iml" filepath="$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-druid/yyld-conair-druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-ds/yyld-conair-ds.iml" filepath="$PROJECT_DIR$/yyld-conair-ds/yyld-conair-ds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yyld-conair-eip/yyld-conair-eip.iml" filepath="$PROJECT_DIR$/yyld-conair-eip/yyld-conair-eip.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-eureka-server/yyld-conair-eureka-server.iml" filepath="$PROJECT_DIR$/yyld-conair-eureka-server/yyld-conair-eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/yyld-conair-pay/yyld-conair-pay.iml" filepath="$PROJECT_DIR$/yyld-conair-pay/yyld-conair-pay.iml" />
     </modules>

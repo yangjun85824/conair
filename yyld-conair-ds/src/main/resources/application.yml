@@ -1,5 +1,16 @@
 server:
   port: 4567
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+### 特殊情况下，查询结果返回List<Map>格式，会自动将查询结果为null的字段忽略，加入该配置
+    call-setters-on-nulls: true
+
+#spring:
+#  jackson:
+#    serialization:
+#      FAIL_ON_EMPTY_BEANS: false
 #mybatis-plus
 #mybatis-plus:
 #  #xml

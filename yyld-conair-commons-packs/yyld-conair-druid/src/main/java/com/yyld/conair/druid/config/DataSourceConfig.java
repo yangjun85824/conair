@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.sql.DataSource;
+import java.util.Map;
+
 /**
  * @Description: 功能描述
  */
@@ -35,6 +38,14 @@ public class DataSourceConfig extends AbstractRoutingDataSource {
         logger.info("datasource=" + datasource);
 
         return datasource;
+    }
+
+    public void setTargetDataSources(String dbName, DataSource dataSource){
+
+        DataSourceUtil.addDataSource(dbName,dataSource);
+        //DataSourceUtil.initOthersDataSource();
+        super.setTargetDataSources(DataSourceUtil.dataSourceMap);
+        super.afterPropertiesSet();
     }
 
     /*@Bean(name = "defaultDs")

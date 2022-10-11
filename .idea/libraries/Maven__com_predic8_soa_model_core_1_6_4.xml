@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.predic8:soa-model-core:1.6.4">
+    <CLASSES>
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/predic8/soa-model-core/1.6.4/soa-model-core-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/predic8/soa-model-core/1.6.4/soa-model-core-1.6.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Dev/Maven/repository-yyld/com/predic8/soa-model-core/1.6.4/soa-model-core-1.6.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

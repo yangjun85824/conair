@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试发票</title>
+    <script type="text/javascript" src="http://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+</head>
+<body>
+<div style="position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); ">
+    <p th:text="${timestamp}"></p>
+    <p th:text="${nonceStr}"></p>
+    <p th:text="${signature}"></p>
+    <br/>
+    <a th:href="${aliurl}"> 授 权 </a>
+    <br/>
+    <a href="javascript:void(0)" onclick="invoiceList()">拉取发票</a>
+</div>
+</body>
+
+<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+    const vConsole = new VConsole();
+</script>
+<!-- <script src="https://cdn.bootcss.com/eruda/1.3.2/eruda.min.js"></script>
+<script>
+  eruda.init();
+</script>  -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        wx.config({
+            beta: true,
+            debug: false,
+            appId: "[[${appId}]]",
+            timestamp: "[[${timestamp}]]",
+            nonceStr: "[[${nonceStr}]]",
+            signature: "[[${signature}]]",
+            jsApiList: ['chooseInvoice', 'chooseInvoiceTitle']
+        });
+        // function invoiceList() {
+        //     setTimeout(
+        wx.ready(function () {
+            wx.invoke('chooseInvoice', {
+                // "scene": "1"
+                'timestamp': "[[${timestamp}]]",
+                'nonceStr': "[[${nonceStr}]]",
+            }, function (res) {
+                console.log(res)
+                // alert(res.err_msg);
+                // alert(res.choose_invoice_info);
+                // console.log(JSON.stringify(res));
+                // alert(JSON.stringify(res));
+                if (res.err_msg == "choose_invoice:ok") {
+
+                    invoiceListInfo(res.choose_invoice_info);
+
+                }
+            });
+
+        });
+        // , 3000);
+        // }
+        function invoiceListInfo(invoiceList) {
+
+            // $.post("/pay/wx/getinvoicebatch", invoiceList,
+            //     function(data,status){
+            //         console.log("data-===========",data)
+            //     },
+            //     "json");
+            $.ajax({
+                type:"POST",
+                contentType: "application/json", //必须这样写
+                url: "/pay/wx/getinvoicebatch",
+                data: invoiceList,
+                success: function (data) {
+                    console.log("data-===========",data)
+                },
+                dataType: "json"
+            });
+        }
+
+
+    });
+
+</script>
+</html>

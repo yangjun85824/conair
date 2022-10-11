@@ -22,7 +22,7 @@
         <module>yyld-conair-eureka-server</module>
         <module>yyld-conair-crawler</module>
         <module>yyld-conair-pay</module>
-
+        <module>yyld-conair-eip</module>
     </modules>
 
     <properties>
@@ -48,7 +48,18 @@
         <alipay-sdk.version>4.33.1.ALL</alipay-sdk.version>
         <oracle.version>21.5.0.0</oracle.version>
 
-<!--        <slf4j.version>2.0.0-beta1</slf4j.version>-->
+        <spring-boot.version>2.7.2</spring-boot.version>
+
+        <apache-camel-spring.version>3.0.0-RC3</apache-camel-spring.version>
+        <camel.servlet.version>3.0.0-RC3</camel.servlet.version>
+        <apache-camel.version>3.14.5</apache-camel.version>
+        <soa.predic8.core.version>1.6.4</soa.predic8.core.version>
+        <cxf.version>3.5.3</cxf.version>
+        <camel-openapi-java.version>3.14.5</camel-openapi-java.version>
+
+        <!--        <camel.spring.version>3.14.5</camel.spring.version>-->
+        <camel.spring.version>3.14.5</camel.spring.version>
+        <!--        <slf4j.version>2.0.0-beta1</slf4j.version>-->
 
         <commons.version>0.0.1-SNAPSHOT</commons.version>
         <ds.version>0.0.1-SNAPSHOT</ds.version>
@@ -288,6 +299,12 @@
             </dependency>
 
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${alibaba.fastjson.version}</version>
@@ -385,6 +402,107 @@
                 <version>${oracle.version}</version>
                 <scope>runtime</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-core</artifactId>
+                <version>${apache-camel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-spring-boot-starter</artifactId>
+                <version>${apache-camel-spring.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel.springboot/camel-spring-boot-starter -->
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-spring-boot-starter</artifactId>
+                <version>${apache-camel.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.predic8</groupId>
+                <artifactId>soa-model-core</artifactId>
+                <version>${soa.predic8.core.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-core -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-core</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-frontend-jaxws -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-servlet-starter -->
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-servlet-starter</artifactId>
+                <version>${camel.servlet.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-servlet-starter</artifactId>
+                <version>${apache-camel.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-servlet -->
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-servlet</artifactId>
+                <version>${apache-camel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-spring</artifactId>
+                <version>${camel.spring.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel/camel-openapi-java -->
+            <dependency>
+                <groupId>org.apache.camel</groupId>
+                <artifactId>camel-openapi-java</artifactId>
+                <version>${camel-openapi-java.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel.springboot/camel-openapi-java-starter -->
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-openapi-java-starter</artifactId>
+                <version>${camel-openapi-java.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel.springboot/camel-jackson-starter -->
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-jackson-starter</artifactId>
+                <version>${camel.spring.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-transports-http -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.camel.springboot/camel-http-starter -->
+            <dependency>
+                <groupId>org.apache.camel.springboot</groupId>
+                <artifactId>camel-http-starter</artifactId>
+                <version>${camel.spring.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

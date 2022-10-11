@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试发票</title>
+</head>
+<body>
+<div style="position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); ">
+    <p th:text="${auth.accessToken}"></p>
+    <p th:text="${auth.userId}"></p>
+    <br/>
+    <a th:href="${invoiceurl}"> 摘 取 发 票 </a>
+</div>
+</body>
+</html>

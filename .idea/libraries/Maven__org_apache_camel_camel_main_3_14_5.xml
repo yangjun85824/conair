@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.camel:camel-main:3.14.5">
+    <CLASSES>
+      <root url="jar://D:/Dev/Maven/repository-yyld/org/apache/camel/camel-main/3.14.5/camel-main-3.14.5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Dev/Maven/repository-yyld/org/apache/camel/camel-main/3.14.5/camel-main-3.14.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Dev/Maven/repository-yyld/org/apache/camel/camel-main/3.14.5/camel-main-3.14.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

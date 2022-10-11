@@ -2,10 +2,13 @@ package com.yyld.conair.druid.utils;
 
 import com.yyld.conair.druid.druid.AbsDataSources;
 import com.yyld.conair.druid.druid.ext.DefaultDataSources;
+import com.yyld.conair.druid.entity.DataSourceInfoEntity;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -15,6 +18,8 @@ import java.util.Map;
 public final class DataSourceUtil {
 
     public static Map<Object, Object> dataSourceMap = new HashMap();
+
+    public static List<DataSourceInfoEntity> entityList = new ArrayList<>();
 
     public static String defaultDs;
 
@@ -48,4 +53,5 @@ public final class DataSourceUtil {
 
         return dataSource;
     }
+
 }

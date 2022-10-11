@@ -1,0 +1,9 @@
+server:
+  port: 8003
+
+camel:
+  springboot:
+    name: eip
+  servlet:
+    mapping:
+      context-path: /eip/*
