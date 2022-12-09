@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../../Dev/Maven/repository-yyld/org/springframework/boot/spring-boot-starter-parent/2.4.2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatisplusgeneratecode" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatisplusgeneratecode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-druid/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/yyld-conair-druid/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-crawler" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-crawler/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-crawler/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-ds" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-ds/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-ds/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-eip" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-eip/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-eip/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-pay/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-light4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-light4j/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

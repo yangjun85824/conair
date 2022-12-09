@@ -14,11 +14,15 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/mybatisplusgeneratecode/pom.xml" />
         <option value="$PROJECT_DIR$/yyld-conair-eip/pom.xml" />
+        <option value="$PROJECT_DIR$/yyld-light4j/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
   </component>
   <component name="SuppressionsComponent">
     <option name="suppComments" value="[]" />
