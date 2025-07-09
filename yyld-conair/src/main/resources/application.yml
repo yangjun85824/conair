@@ -1,0 +1,47 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /dyn-java
+
+management:
+  security:
+    roles: SUPERUSER
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: '*'
+      discovery:
+        enabled: false
+  endpoint:
+    health:
+      show-details: ALWAYS
+    service-registry:
+      enabled: false
+  health:
+    mail:
+      enabled: false
+    redis:
+      enabled: false
+    rabbit:
+      enabled: false
+    mongo:
+      enabled: false
+
+#management:
+#  endpoints:
+#    enabled-by-default: false #关闭监控
+#    #只允许 get post接口
+#    web:
+#      exposure:
+#        include: '*'
+#      discovery:
+#        enabled: false
+#  #      base-path: /monitor
+#  endpoint:
+#    health:
+#      show-details: always
+#    shutdown:
+#      enabled: false
+#    info:
+#      enabled: false

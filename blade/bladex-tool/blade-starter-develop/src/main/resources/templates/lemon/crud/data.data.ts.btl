@@ -1,0 +1,102 @@
+import { BasicColumn } from '@/components/Table';
+import { FormSchema } from '@/components/Table';
+import { DescItem } from '@/components/Description/index';
+import { getDictList } from '@/api/system/system';
+
+
+export const columns: BasicColumn[] = [
+    #for(x in prototypes) {
+        #if(x.isList==1){
+            {
+                title: "${x.jdbcComment!}",
+                dataIndex: "${x.propertyName!}",
+            },
+       #}
+     #}
+   ];
+
+export const searchFormSchema: FormSchema[] = [
+      #for(x in prototypes) {
+         #if(x.isQuery==1){
+            {
+                field: "${x.propertyName!}_${x.queryType!}",
+                label: "${x.jdbcComment!}",
+                #if(x.componentType=="input"){
+                component: 'Input',
+                #}else if(x.componentType=="textarea"){
+                component: 'InputTextArea',
+                #}else if(x.componentType=="select"){
+                component: 'ApiSelect',
+                #}else if(x.componentType=="tree"){
+                component: 'ApiTreeSelect',
+                #}else if(x.componentType=="radio"){
+                component: 'RadioGroup',
+                #}else if(x.componentType=="checkbox"){
+                component: 'Checkbox',
+                #}else if(x.componentType=="switch"){
+                component: 'Switch',
+                #}else if(x.componentType=="date"){
+                component: 'DatePicker',
+                #}
+                #if(x.componentType=="select"&&x.dictCode!=null){
+                componentProps: {
+                     api: getDictList,
+                     params: { code: '${x.dictCode!}' },
+                     labelField: 'dictValue',
+                     valueField: 'dictKey',
+                    },
+                #}
+            },
+             #}
+          #}
+];
+
+export const formSchema: FormSchema[] = [
+      #for(x in prototypes) {
+         #if(x.isForm!=0){
+            {
+                field: "${x.propertyName!}",
+                label: "${x.jdbcComment!}",
+                #if(x.componentType=="input"){
+                component: 'Input',
+                #}else if(x.componentType=="textarea"){
+                component: 'InputTextArea',
+                #}else if(x.componentType=="select"){
+                component: 'ApiSelect',
+                #}else if(x.componentType=="tree"){
+                component: 'ApiTreeSelect',
+                #}else if(x.componentType=="radio"){
+                component: 'RadioGroup',
+                #}else if(x.componentType=="checkbox"){
+                component: 'Checkbox',
+                #}else if(x.componentType=="switch"){
+                component: 'Switch',
+                #}else if(x.componentType=="date"){
+                component: 'DatePicker',
+                #}
+                #if(x.componentType=="select"&&x.dictCode!=null){
+                componentProps: {
+                     api: getDictList,
+                     params: { code: '${x.dictCode!}' },
+                     labelField: 'dictValue',
+                     valueField: 'dictKey',
+                    },
+                #}
+                #if(x.isRequired==1){
+                    required: true,
+                #}
+            },
+             #}
+         #}
+];
+
+export const detailSchema: DescItem[] = [
+    #for(x in prototypes) {
+           #if(x.isForm!=0){
+            {
+                field: "${x.propertyName!}",
+                label: "${x.jdbcComment!}",
+            },
+        #}
+     #}
+];

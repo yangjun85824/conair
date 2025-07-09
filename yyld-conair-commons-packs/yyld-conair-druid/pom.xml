@@ -59,6 +59,199 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.ofdrw</groupId>-->
+<!--            <artifactId>ofdrw-converter</artifactId>-->
+<!--            <version>2.3.2</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${pom.basedir}/lib/ofdrw-converter-2.3.2.jar</systemPath>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.ofdrw</groupId>
+            <artifactId>ofdrw-converter</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/ofdrw-converter-2.0.5.jar</systemPath>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>io</artifactId>
+            <version>7.1.15</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+            <scope>compile</scope>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.pdfbox</groupId>-->
+<!--            <artifactId>fontbox</artifactId>-->
+<!--            <version>3.0.2</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.pdfbox/fontbox -->
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>fontbox</artifactId>
+            <version>2.0.32</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.ofdrw/ofdrw-reader -->
+        <dependency>
+            <groupId>org.ofdrw</groupId>
+            <artifactId>ofdrw-reader</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/ofdrw-reader-2.0.5.jar</systemPath>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ofdrw/ofdrw-full -->
+<!--        <dependency>-->
+<!--            <groupId>org.ofdrw</groupId>-->
+<!--            <artifactId>ofdrw-full</artifactId>-->
+<!--            <version>2.3.2</version>-->
+<!--            <systemPath>${pom.basedir}/lib/ofdrw-full-2.3.2.jar</systemPath>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.ofdrw/ofdrw-pkg -->
+<!--        <dependency>-->
+<!--            <groupId>org.ofdrw</groupId>-->
+<!--            <artifactId>ofdrw-pkg</artifactId>-->
+<!--            <version>2.3.2</version>-->
+<!--            <systemPath>${pom.basedir}/lib/ofdrw-pkg-2.3.2.jar</systemPath>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.apache.logging.log4j</groupId>-->
+<!--                    <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.ofdrw</groupId>
+            <artifactId>ofdrw-pkg</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/ofdrw-pkg-2.0.5.jar</systemPath>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>dom4j</groupId>-->
+<!--            <artifactId>dom4j</artifactId>-->
+<!--            <version>1.6.1</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.dom4j/dom4j -->
+        <dependency>
+            <groupId>org.dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+
+        <!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-compress</artifactId>-->
+<!--            <version>1.24.0</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-compress</artifactId>-->
+<!--            <version>1.20</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.27.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>om.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>7.1.15</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/kernel-7.1.15.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>jbig2-imageio</artifactId>
+            <version>3.0.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.ofdrw/ofdrw-gm -->
+        <dependency>
+            <groupId>org.ofdrw</groupId>
+            <artifactId>ofdrw-gm</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/ofdrw-gm-2.0.5.jar</systemPath>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.ofdrw/ofdrw-core -->
+        <dependency>
+            <groupId>org.ofdrw</groupId>
+            <artifactId>ofdrw-core</artifactId>
+            <version>2.0.5</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/ofdrw-core-2.0.5.jar</systemPath>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.ujmp/ujmp-core -->
+        <dependency>
+            <groupId>org.ujmp</groupId>
+            <artifactId>ujmp-core</artifactId>
+            <version>0.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.68</version>
+            <scope>compile</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>

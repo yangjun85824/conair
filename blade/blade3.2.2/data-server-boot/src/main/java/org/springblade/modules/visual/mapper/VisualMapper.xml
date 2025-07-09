@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualResultMap" type="org.springblade.modules.visual.pojo.entity.Visual">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="title" property="title"/>
+        <result column="img" property="img"/>
+        <result column="category" property="category"/>
+        <result column="password" property="password"/>
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BladeX 统一认证系统</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-theme.css">
+</head>
+<body>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <div class="website-logo-inside">
+                        <img class="logo-size" src="/static/images/bladex-logo.png">
+                        <h1>BladeX 统一认证系统</h1>
+                    </div>
+                    <p>应用授权失败</p>
+                    <div class="page-links">
+                        <a>请返回 [认证页面] 重新认证</a>
+                    </div>
+                    <div class="form-button">
+                        <button id="logout" class="lbtn">前往认证</button>
+                    </div>
+                </div>
+                <div class="other-links">
+                    <span>Copyrights © 2024 <a href="https://bladex.cn" target="_blank">BladeX</a> All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script>
+    $("#logout").click(function(){
+        window.location.href = "/oauth/authorize/logout";
+    });
+</script>
+</body>
+</html>

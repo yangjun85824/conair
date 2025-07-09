@@ -1,0 +1,30 @@
+export default {
+  expand: false,
+  index: true,
+  border: true,
+  selection: true,
+  column: [
+#for(x in prototypes) {
+    {
+      label: "${x.jdbcComment!}",
+      prop: "${x.propertyName!}",
+#if(strutil.contain(x.componentType,"date")||strutil.contain(x.componentType,"time")){
+      format: "YYYY-MM-DD HH:mm:ss",
+      valueFormat: "YYYY-MM-DD HH:mm:ss",
+#}
+#if(x.isForm==0){
+      display: false,
+#}
+#if(x.isRow==1){
+      span: 24,
+#}
+#if(x.isList==0){
+      hide: true,
+#}
+#if(x.isQuery==1){
+      search: true,
+#}
+    },
+#}
+  ]
+}

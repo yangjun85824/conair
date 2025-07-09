@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualDbMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="datasourceResultMap" type="org.springblade.modules.visual.pojo.entity.VisualDb">
+        <result column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="driver_class" property="driverClass"/>
+        <result column="url" property="url"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <!-- 数据源查询映射结果 -->
+    <resultMap id="visualDbResultMap" type="org.springblade.modules.visual.pojo.dto.VisualDbDTO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="driver_class" property="driverClass"/>
+    </resultMap>
+
+    <!-- 数据源列表查询 -->
+    <select id="dbList" resultMap="visualDbResultMap">
+        select id, name, driver_class from blade_visual_db
+    </select>
+
+    <!-- 动态SQL查询 -->
+    <select id="dynamicQuery" parameterType="String" resultType="java.util.LinkedHashMap">
+        ${value}
+    </select>
+
+</mapper>

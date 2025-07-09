@@ -1,0 +1,9 @@
+${AnsiColor.BLUE}    ____  _           _     __   __  _____        _           _____
+${AnsiColor.BLUE}   |  _ \| |         | |    \ \ / / |  __ \      | |         / ____|
+${AnsiColor.BLUE}   | |_) | | __ _  __| | ___ \ V /  | |  | | __ _| |_ __ _  | (___   ___ _ ____   _____ _ __
+${AnsiColor.BLUE}   |  _ <| |/ _` |/ _` |/ _ \ > <   | |  | |/ _` | __/ _` |  \___ \ / _ \ '__\ \ / / _ \ '__|
+${AnsiColor.BLUE}   | |_) | | (_| | (_| |  __// . \  | |__| | (_| | || (_| |  ____) |  __/ |   \ V /  __/ |
+${AnsiColor.BLUE}   |____/|_|\__,_|\__,_|\___/_/ \_\ |_____/ \__,_|\__\__,_| |_____/ \___|_|    \_/ \___|_|
+
+
+${AnsiColor.BLUE}:: DataServerGateway :: ${spring.application.name}:${AnsiColor.RED}${blade.env}${AnsiColor.BLUE} :: Running SpringBoot ${spring-boot.version} :: ${AnsiColor.BRIGHT_BLACK}

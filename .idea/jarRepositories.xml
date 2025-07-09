@@ -2,8 +2,28 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="aliyun-repos" />
+      <option name="name" value="aliyun-repos" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aspose-maven-repository" />
+      <option name="name" value="aspose-maven-repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aliyun-repos" />
+      <option name="name" value="Aliyun Public Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="sonatype-snapshots" />
       <option name="name" value="sonatype-snapshots" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="AsposeJavaAPI" />
+      <option name="name" value="Aspose Java API" />
       <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
     </remote-repository>
     <remote-repository>
@@ -12,13 +32,18 @@
       <option name="url" value="https://repo1.maven.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss.community" />
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="central" />
-      <option name="name" value="Central Repository" />
+      <option name="id" value="bladex" />
+      <option name="name" value="BladeX Release Repository" />
       <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public" />
     </remote-repository>
   </component>

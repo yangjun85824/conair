@@ -1,0 +1,6 @@
+{
+  "code": 400,
+  "success": false,
+  "data": {},
+  "msg": "缺少必要的请求参数: visualId"
+}

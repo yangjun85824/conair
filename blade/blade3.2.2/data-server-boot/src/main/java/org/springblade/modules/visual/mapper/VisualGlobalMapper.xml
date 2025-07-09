@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualGlobalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualGlobalResultMap" type="org.springblade.modules.visual.pojo.entity.VisualGlobal">
+        <result column="id" property="id"/>
+        <result column="global_name" property="globalName"/>
+        <result column="global_key" property="globalKey"/>
+        <result column="global_value" property="globalValue"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+</mapper>

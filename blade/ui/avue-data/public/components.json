@@ -1,0 +1,114 @@
+[{
+  "label": "CRUD表格",
+  "option": {
+    "name": "CRUD表格",
+    "title": "CRUD表格",
+    "icon": "icon-vue",
+    "img": "img/assets/text4.png",
+    "dataType": 0,
+    "data": [
+        {
+            "name": "张三",
+            "sex": "男"
+        },
+        {
+            "name": "李四",
+            "sex": "女"
+        }
+    ],
+    "dataFormatter": "",
+    "dataHeader": "",
+    "dataQuery": "",
+    "stylesFormatter": "",
+    "component": {
+        "width": 780,
+        "height": 263,
+        "name": "vue",
+        "prop": "vue",
+        "remoteContent": "<template>\n    <avue-crud :option=\"option\" :data=\"dataChart\"></avue-crud>\n</template>\n<script>\nexport default{\n    data(){\n        return{\n            option:{\n                column:[{\n                    label:'姓名',\n                    prop:'name'\n                },{\n                    label:'性别',\n                    prop:'sex'\n                }]\n            } \n        }\n    },\n    created(){\n       \n    },\n    methods:{\n       \n    }\n}\n</script>\n<style>\n    .test{\n        text-align:center;\n        color:red;\n        font-size:40px;\n    }\n</style>",
+        "scale": 0,
+        "perspective": 0,
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "contrast": 0,
+        "saturate": 0,
+        "brightness": 0,
+        "opacity": 0,
+        "grayscale": 0,
+        "hueRotate": 0,
+        "invert": 0,
+        "blur": 0
+    },
+    "option": {
+        "remote": false,
+        "content": "<template>\n    <avue-crud :option=\"option\" :data=\"dataChart\"></avue-crud>\n</template>\n<script>\nexport default{\n    data(){\n        return{\n            option:{\n                column:[{\n                    label:'姓名',\n                    prop:'name'\n                },{\n                    label:'性别',\n                    prop:'sex'\n                }]\n            } \n        }\n    },\n    created(){\n       \n    },\n    methods:{\n       \n    }\n}\n</script>\n<style>\n    .test{\n        text-align:center;\n        color:red;\n        font-size:40px;\n    }\n</style>",
+        "src": "/vue-remote-temp.js"
+    },
+    "left": 422,
+    "top": 254,
+    "index": "67056d8d-4bed-44f1-9189-0781597dfb15",
+    "display": false,
+    "lock": false,
+    "group": "",
+    "child": {
+        "index": [],
+        "paramList": []
+    },
+    "zIndex": 0,
+    "rotate": 0
+}},{
+  "label": "FORM表单",
+  "option":{
+    "name": "FORM表单",
+    "title": "FORM表单",
+    "icon": "icon-vue",
+    "img": "img/assets/text4.png",
+    "dataType": 0,
+    "data": {
+        "name": "张三",
+        "sex": "男"
+    },
+    "dataFormatter": "",
+    "dataHeader": "",
+    "dataQuery": "",
+    "stylesFormatter": "",
+    "component": {
+        "width": 780,
+        "height": 124,
+        "name": "vue",
+        "prop": "vue",
+        "remoteContent": "<template>\n    <avue-form :option=\"option\" v-model=\"dataChart\"></avue-form>\n</template>\n<script>\nexport default{\n    data(){\n        return{\n            option:{\n                column:[{\n                    label:'姓名',\n                    prop:'name'\n                },{\n                    label:'性别',\n                    prop:'sex'\n                }]\n            } \n        }\n    },\n    created(){\n       \n    },\n    methods:{\n       \n    }\n}\n</script>\n<style>\n    \n</style>",
+        "scale": 0,
+        "perspective": 0,
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "contrast": 0,
+        "saturate": 0,
+        "brightness": 0,
+        "opacity": 0,
+        "grayscale": 0,
+        "hueRotate": 0,
+        "invert": 0,
+        "blur": 0
+    },
+    "option": {
+        "remote": false,
+        "content": "<template>\n    <avue-form :option=\"option\" v-model=\"dataChart\"></avue-form>\n</template>\n<script>\nexport default{\n    data(){\n        return{\n            option:{\n                column:[{\n                    label:'姓名',\n                    prop:'name'\n                },{\n                    label:'性别',\n                    prop:'sex'\n                }]\n            } \n        }\n    },\n    created(){\n       \n    },\n    methods:{\n       \n    }\n}\n</script>\n<style>\n    \n</style>",
+        "src": "/vue-remote-temp.js"
+    },
+    "left": 450,
+    "top": 337,
+    "index": "784610af-4fdd-4e48-8647-2f1f263561a1",
+    "display": false,
+    "lock": false,
+    "group": "",
+    "child": {
+        "index": [],
+        "paramList": []
+    },
+    "zIndex": 0,
+    "rotate": 0
+}
+}]

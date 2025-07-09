@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package.Mapper!}.${modelClass!}Mapper">
+
+#if(enableCache){
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+#}
+    <!-- 通用查询映射结果 -->
+    <resultMap id="${modelCode!}ResultMap" type="${package.Entity!}.${modelClass!}Entity">
+        #for(x in prototypes) {
+        <result column="${x.jdbcName!}" property="${x.propertyName!}"/>
+        #}
+    </resultMap>
+
+#if(templateType=="tree"){
+    <resultMap id="treeNodeResultMap" type="org.springblade.core.tool.node.TreeNode">
+        <id column="id" property="id"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="title" property="title"/>
+        <result column="value" property="value"/>
+        <result column="key" property="key"/>
+    </resultMap>
+#}
+
+    <select id="select${modelClass!}Page" resultMap="${modelCode!}ResultMap">
+        select * from ${model.modelTable} where is_deleted = 0
+    </select>
+
+#if(templateType=="tree"){
+    <select id="tree" resultMap="treeNodeResultMap">
+        select ${treeId!} as id, ${treePid!} as parent_id, ${treeName!} as title, ${treeId!} as 'value', ${treeId!} as 'key' from ${model.modelTable!} where is_deleted = 0
+        <if test="_parameter!=null">
+            and tenant_id = \#{_parameter}
+        </if>
+    </select>
+#}
+
+    <select id="export${modelClass!}" resultType="${packageName!}.excel.${modelClass!}Excel">
+        SELECT * FROM ${model.modelTable!} \${ew.customSqlSegment}
+    </select>
+
+</mapper>

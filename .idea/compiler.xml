@@ -8,39 +8,193 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="yyld-conair-druid" />
-        <module name="mybatisplusgeneratecode" />
+        <module name="blade-visual-api" />
+        <module name="blade-visual" />
         <module name="yyld-conair-ds" />
-        <module name="petstore" />
-        <module name="yyld-conair-crawler" />
+        <module name="yyld-conair" />
+        <module name="web-test" />
         <module name="yyld-conair-eureka-server" />
+        <module name="blade-gateway" />
+        <module name="yyld-conair-commons" />
+        <module name="kkFileView" />
+        <module name="mybatisplusgeneratecode" />
+        <module name="yyld-conair-friend" />
+        <module name="yyld-conair-crawler" />
+        <module name="blade-common" />
         <module name="yyld-conair-pay" />
         <module name="yyld-conair-eip" />
-        <module name="yyld-conair-commons" />
+        <module name="yyld-ligjht" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="18">
-      <module name="conair" target="1.8" />
-      <module name="mybatisplusgeneratecode" target="1.8" />
-      <module name="petstore" target="11" />
-      <module name="yyld-conair-commons" target="1.8" />
-      <module name="yyld-conair-commons-packs" target="1.8" />
-      <module name="yyld-conair-crawler" target="1.8" />
-      <module name="yyld-conair-druid" target="1.8" />
-      <module name="yyld-conair-ds" target="1.8" />
-      <module name="yyld-conair-eip" target="1.8" />
-      <module name="yyld-conair-eureka-server" target="1.8" />
-      <module name="yyld-conair-pay" target="1.8" />
+    <bytecodeTargetLevel target="11">
+      <module name="blade-admin" target="17" />
+      <module name="blade-auth" target="17" />
+      <module name="blade-bom" target="17" />
+      <module name="blade-core-auto" target="17" />
+      <module name="blade-core-boot" target="17" />
+      <module name="blade-core-cloud" target="17" />
+      <module name="blade-core-context" target="17" />
+      <module name="blade-core-db" target="17" />
+      <module name="blade-core-launch" target="17" />
+      <module name="blade-core-log4j2" target="17" />
+      <module name="blade-core-oauth2" target="17" />
+      <module name="blade-core-secure" target="17" />
+      <module name="blade-core-test" target="17" />
+      <module name="blade-core-tool" target="16" />
+      <module name="blade-desk" target="17" />
+      <module name="blade-desk-api" target="17" />
+      <module name="blade-develop" target="17" />
+      <module name="blade-dict-api" target="17" />
+      <module name="blade-flow" target="17" />
+      <module name="blade-flow-api" target="17" />
+      <module name="blade-job" target="17" />
+      <module name="blade-log" target="17" />
+      <module name="blade-ops" target="17" />
+      <module name="blade-ops-api" target="17" />
+      <module name="blade-plugin" target="17" />
+      <module name="blade-plugin-api" target="17" />
+      <module name="blade-report" target="17" />
+      <module name="blade-resource" target="17" />
+      <module name="blade-resource-api" target="17" />
+      <module name="blade-scope-api" target="17" />
+      <module name="blade-starter-actuate" target="17" />
+      <module name="blade-starter-api-crypto" target="17" />
+      <module name="blade-starter-auth" target="17" />
+      <module name="blade-starter-cache" target="17" />
+      <module name="blade-starter-datascope" target="17" />
+      <module name="blade-starter-develop" target="17" />
+      <module name="blade-starter-ehcache" target="17" />
+      <module name="blade-starter-excel" target="17" />
+      <module name="blade-starter-flowable" target="17" />
+      <module name="blade-starter-holidays" target="17" />
+      <module name="blade-starter-http" target="17" />
+      <module name="blade-starter-jwt" target="17" />
+      <module name="blade-starter-liteflow" target="17" />
+      <module name="blade-starter-loadbalancer" target="17" />
+      <module name="blade-starter-log" target="17" />
+      <module name="blade-starter-metrics" target="17" />
+      <module name="blade-starter-mongo" target="17" />
+      <module name="blade-starter-mybatis" target="17" />
+      <module name="blade-starter-oss" target="17" />
+      <module name="blade-starter-powerjob" target="17" />
+      <module name="blade-starter-prometheus" target="17" />
+      <module name="blade-starter-redis" target="17" />
+      <module name="blade-starter-report" target="17" />
+      <module name="blade-starter-sharding" target="17" />
+      <module name="blade-starter-sms" target="17" />
+      <module name="blade-starter-social" target="17" />
+      <module name="blade-starter-swagger" target="17" />
+      <module name="blade-starter-tenant" target="17" />
+      <module name="blade-starter-tenant-dynamic" target="17" />
+      <module name="blade-starter-trace" target="17" />
+      <module name="blade-starter-transaction" target="17" />
+      <module name="blade-system" target="17" />
+      <module name="blade-system-api" target="17" />
+      <module name="blade-user-api" target="17" />
+      <module name="BladeX" target="17" />
+      <module name="BladeX-Tool" target="17" />
+      <module name="Data-Server-Boot" target="1.8" />
+      <module name="ear" target="1.5" />
+      <module name="ejbs" target="1.5" />
+      <module name="kkFileView (1)" target="1.8" />
+      <module name="kkFileView (2)" target="1.8" />
+      <module name="kkFileView-parent" target="1.8" />
+      <module name="logging" target="1.5" />
+      <module name="primary-source" target="1.5" />
+      <module name="project" target="1.8" />
+      <module name="projects" target="1.5" />
+      <module name="servlet" target="1.5" />
+      <module name="servlets" target="1.5" />
+      <module name="WEB-CONAIR-SERVER" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="conair" options="" />
-      <module name="mybatisplusgeneratecode" options="" />
-      <module name="yyld-conair-crawler" options="" />
-      <module name="yyld-conair-ds" options="" />
-      <module name="yyld-conair-eip" options="" />
-      <module name="yyld-conair-eureka-server" options="" />
-      <module name="yyld-conair-pay" options="" />
+      <module name="BladeX" options="-parameters" />
+      <module name="BladeX-Tool" options="-parameters" />
+      <module name="Data-Server" options="-parameters" />
+      <module name="Data-Server-Boot" options="-parameters" />
+      <module name="WEB-CONAIR-SERVER" options="-parameters" />
+      <module name="blade-admin" options="-parameters" />
+      <module name="blade-auth" options="-parameters" />
+      <module name="blade-bom" options="-parameters" />
+      <module name="blade-common" options="-parameters" />
+      <module name="blade-core-auto" options="-parameters" />
+      <module name="blade-core-boot" options="-parameters" />
+      <module name="blade-core-cloud" options="-parameters" />
+      <module name="blade-core-context" options="-parameters" />
+      <module name="blade-core-db" options="-parameters" />
+      <module name="blade-core-launch" options="-parameters" />
+      <module name="blade-core-log4j2" options="-parameters" />
+      <module name="blade-core-oauth2" options="-parameters" />
+      <module name="blade-core-secure" options="-parameters" />
+      <module name="blade-core-test" options="-parameters" />
+      <module name="blade-core-tool" options="-parameters" />
+      <module name="blade-desk" options="-parameters" />
+      <module name="blade-desk-api" options="-parameters" />
+      <module name="blade-develop" options="-parameters" />
+      <module name="blade-dict-api" options="-parameters" />
+      <module name="blade-flow" options="-parameters" />
+      <module name="blade-flow-api" options="-parameters" />
+      <module name="blade-gateway" options="-parameters" />
+      <module name="blade-job" options="-parameters" />
+      <module name="blade-log" options="-parameters" />
+      <module name="blade-ops" options="-parameters" />
+      <module name="blade-ops-api" options="-parameters" />
+      <module name="blade-plugin" options="-parameters" />
+      <module name="blade-plugin-api" options="-parameters" />
+      <module name="blade-report" options="-parameters" />
+      <module name="blade-resource" options="-parameters" />
+      <module name="blade-resource-api" options="-parameters" />
+      <module name="blade-scope-api" options="-parameters" />
+      <module name="blade-service" options="-parameters" />
+      <module name="blade-service-api" options="-parameters" />
+      <module name="blade-starter-actuate" options="-parameters" />
+      <module name="blade-starter-api-crypto" options="-parameters" />
+      <module name="blade-starter-auth" options="-parameters" />
+      <module name="blade-starter-cache" options="-parameters" />
+      <module name="blade-starter-datascope" options="-parameters" />
+      <module name="blade-starter-develop" options="-parameters" />
+      <module name="blade-starter-ehcache" options="-parameters" />
+      <module name="blade-starter-excel" options="-parameters" />
+      <module name="blade-starter-flowable" options="-parameters" />
+      <module name="blade-starter-holidays" options="-parameters" />
+      <module name="blade-starter-http" options="-parameters" />
+      <module name="blade-starter-jwt" options="-parameters" />
+      <module name="blade-starter-liteflow" options="-parameters" />
+      <module name="blade-starter-loadbalancer" options="-parameters" />
+      <module name="blade-starter-log" options="-parameters" />
+      <module name="blade-starter-metrics" options="-parameters" />
+      <module name="blade-starter-mongo" options="-parameters" />
+      <module name="blade-starter-mybatis" options="-parameters" />
+      <module name="blade-starter-oss" options="-parameters" />
+      <module name="blade-starter-powerjob" options="-parameters" />
+      <module name="blade-starter-prometheus" options="-parameters" />
+      <module name="blade-starter-redis" options="-parameters" />
+      <module name="blade-starter-report" options="-parameters" />
+      <module name="blade-starter-sharding" options="-parameters" />
+      <module name="blade-starter-sms" options="-parameters" />
+      <module name="blade-starter-social" options="-parameters" />
+      <module name="blade-starter-swagger" options="-parameters" />
+      <module name="blade-starter-tenant" options="-parameters" />
+      <module name="blade-starter-tenant-dynamic" options="-parameters" />
+      <module name="blade-starter-trace" options="-parameters" />
+      <module name="blade-starter-transaction" options="-parameters" />
+      <module name="blade-system" options="-parameters" />
+      <module name="blade-system-api" options="-parameters" />
+      <module name="blade-user-api" options="-parameters" />
+      <module name="blade-visual" options="-parameters" />
+      <module name="blade-visual-api" options="-parameters" />
+      <module name="conair" options="-parameters" />
+      <module name="mybatisplusgeneratecode" options="-parameters" />
+      <module name="project" options="-parameters" />
+      <module name="yyld-conair" options="-parameters" />
+      <module name="yyld-conair-crawler" options="-parameters" />
+      <module name="yyld-conair-ds" options="-parameters" />
+      <module name="yyld-conair-eip" options="-parameters" />
+      <module name="yyld-conair-eureka-server" options="-parameters" />
+      <module name="yyld-conair-friend" options="-parameters" />
+      <module name="yyld-conair-pay" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,21 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+  servlet:
+    context-path: /wt
+
+#  servlet:
+#    session:
+#      timeout: 0   #永不超时
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+  web:
+    resources:
+      static-locations: classpath:/templates/,classpath:/static/

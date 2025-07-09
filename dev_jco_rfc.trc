@@ -1,0 +1,186 @@
+
+**** Error file opened at 20230623 212539 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Fri Jun 23 21:25:39,844<    RfcException:
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=SAP ASHOST=10.110.116.66 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.110.116.66:3300' not reached
+TIME        Fri Jun 23 21:25:39 2023
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3283
+DETAIL      NiPConnect2: 10.110.116.66:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+    return code: RFC_FAILURE (1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+**** Error file opened at 20230624 170841 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Sat Jun 24 17:08:41,728<    RfcException:
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=SAP ASHOST=10.110.116.66 SYSNR=00 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.110.116.66:3300' not reached
+TIME        Sat Jun 24 17:08:41 2023
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3283
+DETAIL      NiPConnect2: 10.110.116.66:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+    return code: RFC_FAILURE (1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+**** Error file opened at 20230626 145441 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 14:54:41,603<    >RfcGetException rc (7) message: ##.#####,####
+<RfcGetException
+
+
+**** Error file opened at 20230626 145635 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 14:56:35,978<    RfcException:
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=SAP ASHOST=10.110.116.65 SYSNR=24 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.110.116.65:3324' not reached
+TIME        Mon Jun 26 14:56:35 2023
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3283
+DETAIL      NiPConnect2: 10.110.116.65:3324
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+    return code: RFC_FAILURE (1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+**** Error file opened at 20230626 175017 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 17:50:17,302<    >RfcGetException rc (7) message: ##.#####,####
+<RfcGetException
+
+
+**** Error file opened at 20230626 180046 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 18:00:46,876<    >RfcGetException rc (7) message: ##.#####,####
+<RfcGetException
+
+
+**** Error file opened at 20230626 180315 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 18:03:15,135<    RfcException:
+    message: Parameter SAP client ('client') is missing
+    return code: RFC_INVALID_PARAMETER (19)
+    error group: 101
+    key: RFC_ERROR_PROGRAM
+	at com.sap.conn.rfc.api.RfcOptions.checkLogonData(RfcOptions.java:198)
+	at com.sap.conn.rfc.api.RfcOptions.checkParameters(RfcOptions.java:348)
+	at com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcClient.initialize(MiddlewareJavaRfc.java:1365)
+	at com.sap.conn.jco.rt.MiddlewareJavaRfc$JavaRfcClient.connect(MiddlewareJavaRfc.java:1395)
+	at com.sap.conn.jco.rt.ClientConnection.connect(ClientConnection.java:725)
+	at com.sap.conn.jco.rt.RepositoryConnection.connect(RepositoryConnection.java:52)
+	at com.sap.conn.jco.rt.PoolingFactory.init(PoolingFactory.java:115)
+	at com.sap.conn.jco.rt.ConnectionManager.createFactory(ConnectionManager.java:350)
+	at com.sap.conn.jco.rt.DefaultConnectionManager.createFactory(DefaultConnectionManager.java:46)
+	at com.sap.conn.jco.rt.ConnectionManager.getFactory(ConnectionManager.java:324)
+	at com.sap.conn.jco.rt.RfcDestination.getSystemID(RfcDestination.java:1011)
+	at com.sap.conn.jco.rt.RepositoryManager.getRepository(RepositoryManager.java:31)
+	at com.sap.conn.jco.rt.RfcDestination.initRepository(RfcDestination.java:966)
+	at com.sap.conn.jco.rt.RfcDestination.getRepository(RfcDestination.java:1077)
+	at com.sap.conn.jco.rt.RfcDestination.getRepository(RfcDestination.java:33)
+	at com.yyld.conair.ds.sap.jco.SapManager.getFunction(SapManager.java:53)
+	at com.yyld.conair.ds.sap.SapFunctionUtils.function(SapFunctionUtils.java:132)
+	at com.yyld.conair.ds.sap.SapFunctionUtils.main(SapFunctionUtils.java:269)
+
+
+**** Error file opened at 20230626 180514 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 18:05:14,123<    >RfcGetException rc (7) message: ##.#####,####
+<RfcGetException
+
+
+**** Error file opened at 20230626 182857 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Mon Jun 26 18:28:57,622<    >RfcGetException rc (7) message: ##.#####,####
+<RfcGetException
+
+
+**** Error file opened at 20230712 142333 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Wed Jul 12 14:23:33,718<    RfcException:
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=Q24 ASHOST=10.110.9.132 SYSNR=24 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.110.9.132:3324' not reached
+TIME        Wed Jul 12 14:23:33 2023
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3283
+DETAIL      NiPConnect2: 10.110.9.132:3324
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+    return code: RFC_FAILURE (1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION
+
+**** Error file opened at 20230712 143755 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Wed Jul 12 14:37:55,428<    >RfcGetException rc (7) message: No more memory available to add rows to an internal table.
+<RfcGetException
+
+
+**** Error file opened at 20230712 143935 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Wed Jul 12 14:39:35,411<    >RfcGetException rc (7) message: No more memory available to add rows to an internal table.
+<RfcGetException
+
+
+**** Error file opened at 20230712 144659 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Wed Jul 12 14:46:59,746<    >RfcGetException rc (7) message: No more memory available to add rows to an internal table.
+<RfcGetException
+
+
+**** Error file opened at 20230713 093520 China Standard Time Rel 3.0.11 (2014-04-15) [721.619]
+Error:  >Thu Jul 13 09:35:20,944<    RfcException:
+    message: Connect to SAP gateway failed
+Connection parameters: TYPE=A DEST=Q24 ASHOST=10.110.9.132 SYSNR=24 PCS=1
+
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '10.110.9.132:3324' not reached
+TIME        Thu Jul 13 09:35:20 2023
+RELEASE     721
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3283
+DETAIL      NiPConnect2: 10.110.9.132:3324
+SYSTEM CALL connect
+ERRNO       10061
+ERRNO TEXT  WSAECONNREFUSED: Connection refused
+COUNTER     2
+
+    return code: RFC_FAILURE (1)
+    error group: 102
+    key: RFC_ERROR_COMMUNICATION

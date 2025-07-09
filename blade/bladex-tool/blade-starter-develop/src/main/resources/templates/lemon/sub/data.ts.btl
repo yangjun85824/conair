@@ -1,0 +1,30 @@
+import { defHttp } from '@/utils/http/axios';
+
+enum Api {
+        List = '/${serviceName!}/${modelCode!}/list',
+        Submit = '/${serviceName!}/${modelCode!}/submit',
+        Detail = '/${serviceName!}/${modelCode!}/detail',
+        Remove = '/${serviceName!}/${modelCode!}/remove',
+}
+
+//列表
+export function getList(params?: object) {
+    return defHttp.get({ url: Api.List, params: params },
+        { joinParamsToUrl: true, joinTime: false });
+}
+
+//提交
+export function submitObj(params?: object) {
+    return defHttp.post({ url: Api.Submit, params: params });
+}
+
+//详情
+export function getDetail(params?: object) {
+    return defHttp.get({ url: Api.Detail, params });
+}
+
+//删除
+export function remove(params?: object) {
+    return defHttp.post({ url: Api.Remove, params }, { joinParamsToUrl: true });
+}
+

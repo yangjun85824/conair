@@ -7,6 +7,7 @@
             <el-button @click="eip">EIP首页接口测试</el-button>
             <el-button @click="tdlist">跳转到测试列表</el-button>
             <el-button @click="restlist">在线接口调用测试</el-button>
+            <el-button @click="javajx">在线JAVA解析</el-button>
             <router-view></router-view>
         </p>
         <el-dialog append-to-body fullscreen v-model="dialogTableVisible" width="100%" class="dialogTable" title="跨数据库表同数据迁移 / 同步">
@@ -51,7 +52,7 @@
     const dialogTableVisible = ref(false);
     const dialogDsVisible = ref(false);
     
-    let listData = ref({}); //=["111", "2222", "2333"];
+    let listData = ref({});
     
     let columns = ref({});
     
@@ -81,18 +82,8 @@
     
     onMounted(() => initDsList());
     
-    function tdlist() {
-        console.log("sssss");
-        proxy.$router.push('/tableDataList')
-    }
-    
-    function restlist() {
-        console.log("sssss");
-        proxy.$router.push('/eip-rest-index')
-    }
-
-    function eip() {
-        proxy.$router.push('/eip-index');
+    function javajx() {
+        proxy.$router.push('/javajx-index');
     }
     </script>
     

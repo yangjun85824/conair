@@ -1,0 +1,61 @@
+[
+  {
+    "label": "多种数据源的使用",
+    "src": "https://www.bilibili.com/video/BV18e41117oA/"
+  },
+  {
+    "label": "三方网站数据解析",
+    "src": "https://www.bilibili.com/video/BV1Cm42137HF/"
+  },
+  {
+    "label": "数据过滤器使用",
+    "src": " https://www.bilibili.com/video/BV15z421z76V/"
+  },
+  {
+    "label": "组件传参交互",
+    "src": "https://www.bilibili.com/video/BV1nW4y1w7Jn/"
+  },
+  {
+    "label": "自定义组件传参交互1",
+    "src": "https://www.bilibili.com/video/BV19Q4y1w7Mf/"
+  },
+  {
+    "label": "自定义组件传参交互2",
+    "src": "https://www.bilibili.com/video/BV1XN4y1p7Vi/"
+  },
+  {
+    "label": "用Ref去做组件交互",
+    "src": "https://www.bilibili.com/video/BV1Wg4y1U7sh/"
+  },
+  {
+    "label": "自定义组件加载三方包",
+    "src": "https://www.bilibili.com/video/BV17i4y1s7gZ/"
+  },
+  {
+    "label": "多屏幕切换",
+    "src": "https://www.bilibili.com/video/BV1jb4y1A7uZ/"
+  },{
+    "label": "主题色切换和变量使用",
+    "src": "https://www.bilibili.com/video/BV1Wz421q76i/"
+  },
+  {
+    "label": "定时器组件使用",
+    "src": "https://www.bilibili.com/video/BV1tK411h7Sz/"
+  },
+  {
+    "label": "全局变量和全局过滤器",
+    "src": "https://www.bilibili.com/video/BV1Qy411b7ZU/"
+  },
+  {
+    "label": "消息模板推送",
+    "src": "https://www.bilibili.com/video/BV17y41187j5/"
+  },
+  {
+    "label": "语音消息告警",
+    "src": "https://www.bilibili.com/video/BV1k1421r7yh/"
+  },
+  {
+    "label": "大屏导出独立部署",
+    "src": "https://www.bilibili.com/video/BV1sx4y1n76f/"
+  }
+]

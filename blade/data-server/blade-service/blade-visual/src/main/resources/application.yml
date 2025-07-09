@@ -1,0 +1,107 @@
+#服务器配置
+server:
+  port: 5200
+  undertow:
+    threads:
+      # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+      io: 16
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+      worker: 400
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    buffer-size: 1024
+    # 是否分配的直接内存
+    direct-buffers: true
+  servlet:
+    context-path: /blade-visual
+#spring.cloud.nacos.discovery.server-addr=xxx.xxx.xxx.xxx:8848
+#数据源驱动
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      username: ${NACOS_USERNAME:nacos}
+      password: ${NACOS_PASSWORD:nac0sTest1}
+      discovery:
+        #nacos注册中心地址
+        server-addr: ${DISCOVER_SERVICEURL:10.125.238.205:30114}
+        #必须设置service，否则无法启动
+        service: ${spring.application.name}
+        # 注册到 nacos 的指定 namespace（环境），默认为 public
+        # 如果是本地开发调试，可以将空间修改注册到需要验证的环境
+        namespace: ${spring.profiles.active}
+      config:
+        #启用nacos配置中心
+        enabled: ${NACOS_CONFIG_ENABLED:true}
+        #配置中心地址
+        server-addr: ${DISCOVER_SERVICEURL:10.125.238.205:30114}
+        # 获取nacos指定命名空间配置文件，缺省值为public
+        namespace: ${spring.profiles.active}
+#knife4j配置
+knife4j:
+  #启用
+  enable: true
+  #基础认证
+  basic:
+    enable: false
+    username: blade
+    password: blade
+  #增强配置
+  setting:
+    enableSwaggerModels: true
+    enableDocumentManage: true
+    enableHost: false
+    enableHostText: http://localhost
+    enableRequestCache: true
+    enableFilterMultipartApis: false
+    enableFilterMultipartApiMethodType: POST
+    language: zh_cn
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: Copyright © 2024 BladeX All Rights Reserved
+
+#swagger公共信息
+swagger:
+  title: BladeX 数据大屏系统
+  description: BladeX 数据大屏系统
+  version: 4.3.1
+  license: Powered By BladeX
+  license-url: https://bladex.vip
+  terms-of-service-url: https://bladex.vip
+  contact:
+    name: smallchill
+    email: smallchill@163.com
+    url: https://gitee.com/smallc
+
+#oss配置
+oss:
+  enabled: true
+  name: alioss
+  tenant-mode: false
+  endpoint: https://oss-cn-hangzhou.aliyuncs.com
+  bucket-name: 自行设置
+  access-key: 自行设置
+  secret-key: 自行设置
+
+#blade配置
+blade:
+  #XSS配置
+  xss:
+    enabled: false
+  #安全框架配置
+  secure:
+    #放行配置
+    skip-url:
+      - /blade-visual/**
+  #接口配置
+  api:
+    #报文加密配置
+    crypto:
+      #启用报文加密配置
+      enabled: true
+      #使用AesUtil.genAesKey()生成
+      aes-key: O2BEeIv399qHQNhD6aGW8R8DEj4bqHXm
+  #jackson配置
+  jackson:
+    #支持text文本请求,与报文加密同时开启
+    support-text-plain: true

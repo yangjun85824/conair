@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualVersionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualVersionResultMap" type="org.springblade.modules.visual.pojo.entity.VisualVersion">
+        <result column="id" property="id"/>
+        <result column="visual_id" property="visualId"/>
+        <result column="data" property="data"/>
+        <result column="version" property="version"/>
+        <result column="remark" property="remark"/>
+        <result column="create_time" property="createTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+
+</mapper>

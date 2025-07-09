@@ -1,0 +1,74 @@
+export default {
+  height:'auto',
+  calcHeight: 30,
+  tip: false,
+  searchShow: true,
+  searchMenuSpan: 6,
+  border: true,
+  index: true,
+  viewBtn: true,
+  selection: true,
+  dialogClickModal: false,
+  column: [
+#for(x in prototypes) {
+    {
+      label: "${x.jdbcComment!}",
+      prop: "${x.propertyName!}",
+  #if(x.propertyName==treePidHump){
+      type: "tree",
+      dicData: [],
+      props: {
+        label: "title",
+      },
+      value: 0,
+  #}else if(strutil.contain(x.componentType,"editor")){
+      component: 'AvueUeditor',
+      options: {
+        action: '/api/blade-resource/oss/endpoint/put-file',
+        props: {
+          res: "data",
+          url: "link",
+        }
+      },
+      hide: true,
+      minRows: 6,
+  #}else{
+      type: "${x.componentType!}",
+  #}
+#if(strutil.contain(x.componentType,"date")||strutil.contain(x.componentType,"time")){
+      format: "yyyy-MM-dd hh:mm:ss",
+      valueFormat: "yyyy-MM-dd hh:mm:ss",
+#}
+#if(isNotEmpty(x.dictCode)&&x.propertyName!=treePidHump){
+      dicUrl: "/api/blade-system/dict/dictionary?code=${x.dictCode!}",
+      dataType: "number",
+      props: {
+        label: "dictValue",
+        value: "dictKey"
+      },
+#}
+#if(x.isForm==0){
+      addDisplay: false,
+      editDisplay: false,
+      viewDisplay: false,
+#}
+#if(x.isRow==1){
+      span: 24,
+#}
+#if(x.isList==0){
+      hide: true,
+#}
+#if(x.isQuery==1){
+      search: true,
+#}
+#if(x.isRequired==1){
+      rules: [{
+        required: true,
+        message: "请输入${x.jdbcComment!}",
+        trigger: "blur"
+      }],
+#}
+    },
+#}
+  ]
+}

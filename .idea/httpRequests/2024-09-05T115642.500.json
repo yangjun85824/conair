@@ -1,0 +1,6 @@
+{
+  "code": 500,
+  "success": false,
+  "data": {},
+  "msg": "Current request is not a multipart request"
+}

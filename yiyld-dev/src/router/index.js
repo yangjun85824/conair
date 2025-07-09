@@ -22,6 +22,11 @@ const routes = [
         path: '/eip-rest-index',
         name: 'eipRestIndex',
         component: () => import('../views/eip-rest-index.vue')
+    },
+    {
+        path: '/javajx-index',
+        name: 'javajx-index',
+        component: () => import('../views/javajx-index.vue')
     }
 
 ]

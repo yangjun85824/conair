@@ -1,0 +1,3 @@
+liteflow:
+  rule-source: liteflow/*.el.xml
+  print-execution-log: true

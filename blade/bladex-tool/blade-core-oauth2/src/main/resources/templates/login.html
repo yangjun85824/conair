@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BladeX 统一认证系统</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/iofrm-theme.css">
+</head>
+<body>
+<div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <div class="website-logo-inside">
+                        <img class="logo-size" src="/static/images/bladex-logo.png">
+                        <h1>BladeX 统一认证系统</h1>
+                    </div>
+                    <p>欢迎使用统一认证，提交后请对应用进行授权</p>
+                    <div class="page-links">
+                        <a>请输入认证信息</a>
+                    </div>
+                    <div>
+                        <input id='pk' name='pk' th:value="${publicKey}" type='hidden'/>
+                    </div>
+                    <form id="form" action="/oauth/login/perform" method="post">
+                        <input class="form-control" type="text" name="tenant_id" placeholder="请输入租户ID" required>
+                        <input class="form-control" type="text" name="username" placeholder="请输入用户名" required>
+                        <input class="form-control" id="ipt" type="password" name="password" placeholder="请输入密码" required>
+                        <div class="form-button">
+                            <button id="btn" type="button" class="ibtn">登 录</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="other-links">
+                    <span>Copyrights © 2024 <a href="https://bladex.cn" target="_blank">BladeX</a> All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/sm2.min.js"></script>
+<script>
+    $("#btn").click(function(){
+        const val = $("#ipt").val();
+        $("#ipt").val(sm2.doEncrypt(val, $("#pk").val(), 0));
+        $("#btn").attr("disabled", "disabled");
+        $("#btn").text("登 录 中");
+        $("#form").submit();
+    });
+</script>
+</body>
+</html>

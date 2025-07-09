@@ -1,0 +1,46 @@
+server:
+  port: 18080
+  servlet:
+    context-path: /friends
+
+spring:
+  application:
+    name: nacos-test
+  cloud:
+    nacos:
+      username: nacos
+      password: qu!!LSVnc#
+      discovery:
+        # Nacos服务注册中心地址
+        server-addr: ${DISCOVER_SERVICEURL:10.58.240.43:30112}
+        service: ${spring.application.name}
+        namespace: dev
+      config:
+        enabled: true
+        # 指定Nacos配置中心的地址
+        server-addr: ${DISCOVER_SERVICEURL:10.58.240.43:30112}
+        namespace: dev
+#        file-extension: yaml # 指定yaml格式的配置 默认properties
+        extension-configs:
+#        ext-config:
+          # 配置文件名-DataID
+          #覆盖属性consul.serviceUrl.defaultZone配置验证
+          #项目基础配置
+#          - data-id: test.yml
+#            # 默认为DEFAULT_GROUP
+#            group: COMMON_GROUP
+#            # 是否动态刷新，默认为false
+#            refresh: true
+          - data-id: app.yml
+            # 默认为DEFAULT_GROUP
+            group: COMMON_GROUP
+            # 是否动态刷新，默认为false
+            refresh: true
+# 信息安全
+security:
+  sql:
+    enable: true
+    excludes:
+      - /images/*
+      - /jquery/*
+      - /layui/*

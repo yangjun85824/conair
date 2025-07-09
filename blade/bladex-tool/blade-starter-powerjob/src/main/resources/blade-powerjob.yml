@@ -1,0 +1,11 @@
+powerjob:
+  worker:
+    app-name: ${spring.application.name}
+    port: 27777
+    server-address: 127.0.0.1:7700
+    protocol: http
+    store-strategy: disk
+    max-result-length: 4096
+    max-appended-wf-context-length: 4096
+    max-lightweight-task-num: 1024
+    max-heavyweight-task-num: 64

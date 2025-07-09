@@ -1,0 +1,113 @@
+<template>
+  <BasicDrawer
+    v-bind="$attrs"
+    @register="registerDrawer"
+    :title="`[\${${model.modelCode!}Name}] 配置`"
+    width="1000px"
+  >
+    <BasicTable @register="registerTable">
+      <template \#toolbar>
+        <a-button type="primary"  @click="handleCreate">新增</a-button>
+      </template>
+      <template \#bodyCell="{ column, record }">
+        <template v-if="column.dataIndex === 'action'">
+          <TableAction
+            :actions="[
+              {
+                label: '查看',
+                color: 'success',
+                icon: 'clarity:info-standard-line',
+                onClick: handleView.bind(null, record),
+              },
+              {
+                label: '编辑',
+                icon: 'clarity:note-edit-line',
+                onClick: handleEdit.bind(null, record),
+              },
+              {
+                label: '删除',
+                icon: 'ant-design:delete-outlined',
+                color: 'error',
+                popConfirm: {
+                  title: '是否确认删除',
+                  confirm: handleDelete.bind(null, record),
+                },
+              },
+            ]"
+          />
+        </template>
+      </template>
+    </BasicTable>
+    <${modelClass!}Modal @register="registerModal" @success="handleSuccess" />
+  </BasicDrawer>
+</template>
+<script lang="ts" setup>
+  import { BasicTable, useTable, TableAction } from '@/components/Table';
+  import { BasicDrawer, useDrawerInner } from '@/components/Drawer';
+  import { getList, remove } from '@/api/${serviceCode!}/${modelCode!}';
+  import { columns, searchFormSchema } from './${modelCode!}.data';
+  import { useModal } from '@/components/Modal';
+  import ${modelClass!}Modal from './${modelClass!}Modal.vue';
+  import { useMessage } from '@/hooks/web/useMessage';
+  const { createMessage } = useMessage();
+  const { success } = createMessage;
+  const [registerModal, { openModal }] = useModal();
+  const [registerTable, { reload, setProps }] = useTable({
+    api: getList,
+    rowKey: 'id',
+    columns,
+    formConfig: {
+      labelWidth: 120,
+      schemas: searchFormSchema,
+      baseColProps: { xl: 12, xxl: 6 },
+    },
+    useSearchForm: true,
+    immediate: false,
+    actionColumn: {
+      width: 250,
+      title: '操作',
+      dataIndex: 'action',
+    },
+  });
+  const [registerDrawer, { setDrawerProps }] = useDrawerInner(async (data) => {
+    setProps({
+      searchInfo: {${subFkIdHump!}: data.mainId},
+    });
+    reload();
+  });
+
+  function handleCreate() {
+    openModal(true, {
+      isUpdate: false,
+      isDetail: false,
+    });
+  }
+
+  function handleEdit(record: Recordable) {
+    openModal(true, {
+      record,
+      isUpdate: true,
+      isDetail: false,
+    });
+  }
+
+  function handleView(record: Recordable) {
+    openModal(true, {
+      record,
+      isUpdate: false,
+      isDetail: true,
+    });
+  }
+
+  async function handleDelete(record: Recordable) {
+    await remove({ ids: record.id });
+    success('操作成功');
+    reload();
+  }
+
+  function handleSuccess() {
+    //操作成功提示
+    success('操作成功');
+    reload();
+  }
+</script>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualRecordResultMap" type="org.springblade.modules.visual.pojo.entity.VisualRecord">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="data_type" property="dataType"/>
+        <result column="data_method" property="dataMethod"/>
+        <result column="data_header" property="dataHeader"/>
+        <result column="data" property="data"/>
+        <result column="data_query" property="dataQuery"/>
+        <result column="data_query_type" property="dataQueryType"/>
+        <result column="data_formatter" property="dataFormatter"/>
+        <result column="ws_url" property="wsUrl"/>
+        <result column="mqtt_url" property="mqttUrl"/>
+        <result column="mqtt_config" property="mqttConfig"/>
+        <result column="create_user" property="createUser"/>
+        <result column="create_dept" property="createDept"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="status" property="status"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualRecordDTOResultMap" type="org.springblade.modules.visual.pojo.dto.VisualRecordDTO">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="data_type" property="dataType"/>
+    </resultMap>
+
+    <select id="selectVisualRecordPage" resultMap="visualRecordDTOResultMap">
+        select id, name, data_type from blade_visual_record where is_deleted = 0
+        <where>
+            <if test="visualRecord.name!=null">
+                and name like concat(concat('%', #{visualRecord.name}), '%')
+            </if>
+            <if test="visualRecord.dataType!=null">
+                and data_type = #{visualRecord.dataType}
+            </if>
+        </where>
+    </select>
+
+</mapper>

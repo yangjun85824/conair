@@ -1,0 +1,143 @@
+<template>
+    <div>
+        <BasicTable @register="registerTable">
+            <template \#toolbar>
+                <a-button type="primary" v-auth="'${modelCode!}_add'" @click="handleCreate">
+                    新增
+                </a-button>
+            </template>
+            <template \#bodyCell="{ column, record }">
+             #for(x in prototypes) {
+                    #if(isNotEmpty(x.dictCode)){
+                    <template v-if="column.dataIndex === '${x.propertyName!}'">
+                              {{ formatDictValue(options['${x.propertyName!}Data'], record.${x.propertyName!}) }}
+                     </template>
+                    #}
+              #}
+             <template v-if="column.dataIndex === 'action'">
+                 <TableAction
+                     :actions="[
+                          {
+                            auth: '${modelCode!}_view',
+                            label: '查看',
+                            color: 'success',
+                            icon: 'clarity:info-standard-line',
+                            onClick: handleView.bind(null, record),
+                          },
+                          {
+                            auth: '${modelCode!}_edit',
+                            label: '编辑',
+                            icon: 'clarity:note-edit-line',
+                            onClick: handleEdit.bind(null, record),
+                          },
+                          {
+                            label: '子表配置',
+                            icon: 'clarity:note-edit-line',
+                            onClick: handleSubConfig.bind(null, record),
+                          },
+                          {
+                            auth: '${modelCode!}_delete',
+                            label: '删除',
+                            icon: 'ant-design:delete-outlined',
+                            color: 'error',
+                            popConfirm: {
+                              title: '是否确认删除',
+                              confirm: handleDelete.bind(null, record),
+                            },
+                          },
+                        ]"
+                      />
+                 </template>
+            </template>
+        </BasicTable>
+        <${modelClass!}Modal @register="registerModal" @success="handleSuccess" />
+        <${subModel.modelClass!}Sub  @register="registerDrawer" />
+
+    </div>
+</template>
+<script lang="ts" setup name="${modelClass!}">
+    import { ref } from 'vue';
+    import ${modelClass!}Modal from './${modelClass!}Modal.vue';
+    import { BasicTable, useTable, TableAction } from '@/components/Table';
+    import { getList, remove } from '/@/api/${serviceCode!}/${modelCode!}';
+    import { useModal } from '@/components/Modal';
+    import { useDrawer } from '@/components/Drawer';
+    import ${subModel.modelClass!}Sub from './${subModel.modelClass!}Sub.vue';
+    import { columns, searchFormSchema } from './${modelCode!}.data';
+    import { useMessage } from '@/hooks/web/useMessage';
+    import { formatDictValue } from '@/utils';
+    import { getDictList } from '@/api/system/system';
+    //初始化字典
+    let options = ref({});
+    async function fetch() {
+    #for(x in prototypes) {
+        #if(isNotEmpty(x.dictCode)){
+          options.value['${x.propertyName!}Data'] = await getDictList({ code: '${x.dictCode!}' });
+        #}
+    #}
+    }
+    fetch();
+
+    const { createMessage } = useMessage();
+    const [registerModal, { openModal }] = useModal();
+    const [registerDrawer, { openDrawer }] = useDrawer();
+
+    const [registerTable, { reload }] = useTable({
+        api: getList,
+        rowKey: 'id',
+        columns,
+        formConfig: {
+            labelWidth: 120,
+            schemas: searchFormSchema,
+            baseColProps: { xl: 12, xxl: 8 },
+        },
+        useSearchForm: true,
+        actionColumn: {
+            width: 250,
+            title: '操作',
+            dataIndex: 'action',
+        },
+    });
+
+    function handleCreate() {
+        openModal(true, {
+            isDetail: false,
+            isUpdate: false,
+        });
+    }
+
+    function handleView(record: Recordable) {
+        openModal(true, {
+            record,
+            isUpdate: false,
+            isDetail: true,
+        });
+    }
+
+    function handleEdit(record: Recordable) {
+        openModal(true, {
+            record,
+            isDetail: false,
+            isUpdate: true,
+        });
+    }
+
+    function handleSubConfig(record: Recordable) {
+        openDrawer(true, {
+             mainId:record.id
+        });
+    }
+
+
+    async function handleDelete(record: Recordable) {
+        await remove({ ids: record.id });
+        createMessage.success('操作成功');
+        reload();
+    }
+
+    function handleSuccess() {
+        //操作成功提示
+        createMessage.success('操作成功');
+        reload();
+    }
+</script>

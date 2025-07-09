@@ -1,6 +1,11 @@
 package com.yyld.conair.ds.test.controller;
 
 
+import cn.hutool.core.io.FileTypeUtil;
+import cn.hutool.core.io.FileUtil;
+import cn.hutool.core.io.IORuntimeException;
+import com.yyld.conair.commons.data.result.APIResult;
+import com.yyld.conair.commons.data.utils.SpringContextUtil;
 import com.yyld.conair.druid.config.DataSourceContext;
 import com.yyld.conair.ds.test.entity.Ls;
 import com.yyld.conair.ds.test.service.CService;
@@ -10,19 +15,18 @@ import com.yyld.conair.ds.users.entity.Users;
 import com.yyld.conair.ds.users.service.UsersService;
 import com.yyld.conair.ds.utils.CutPictureUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import com.yyld.conair.commons.data.utils.SpringContextUtil;
 
 /**
  * <p>

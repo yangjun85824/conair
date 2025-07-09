@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualAssetsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualAssetsResultMap" type="org.springblade.modules.visual.pojo.entity.VisualAssetsEntity">
+        <id column="id" property="id"/>
+        <result column="assets_name" property="assetsName"/>
+        <result column="assets_type" property="assetsType"/>
+        <result column="assets_url" property="assetsUrl"/>
+        <result column="assets_size" property="assetsSize"/>
+        <result column="assets_time" property="assetsTime"/>
+        <result column="is_deleted" property="isDeleted"/>
+    </resultMap>
+
+</mapper>

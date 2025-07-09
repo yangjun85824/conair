@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualPushTemplateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="pushTemplateResultMap" type="org.springblade.modules.visual.pojo.entity.VisualPushTemplate">
+        <id column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="channel_id" property="channelId"/>
+        <result column="template_name" property="templateName"/>
+        <result column="template_param" property="templateParam"/>
+        <result column="template_desc" property="templateDesc"/>
+    </resultMap>
+
+</mapper>

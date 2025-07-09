@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.yyld.conair</groupId>
     <artifactId>conair</artifactId>
@@ -23,6 +23,8 @@
         <module>yyld-conair-crawler</module>
         <module>yyld-conair-pay</module>
         <module>yyld-conair-eip</module>
+        <module>yyld-conair-friend</module>
+        <module>yyld-conair</module>
     </modules>
 
     <properties>
@@ -32,7 +34,7 @@
         <spring.cloud.version>3.1.2</spring.cloud.version>
         <base.version>0.0.1-SNAPSHOT</base.version>
         <commons.lang.version>2.6</commons.lang.version>
-        <alibaba.fastjson.version>2.0.5</alibaba.fastjson.version>
+        <alibaba.fastjson.version>2.0.20</alibaba.fastjson.version>
         <mybstis-plus.version>3.5.2</mybstis-plus.version>
         <mysql.version>8.0.29</mysql.version>
         <druid.version>1.2.11</druid.version>
@@ -68,6 +70,8 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring.webscoket.version>3.3.0</spring.webscoket.version>
+        <hutool.version>5.8.27</hutool.version>
     </properties>
 
     <dependencies>
@@ -502,6 +506,20 @@
                 <artifactId>camel-http-starter</artifactId>
                 <version>${camel.spring.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-websocket -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+                <version>${spring.webscoket.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

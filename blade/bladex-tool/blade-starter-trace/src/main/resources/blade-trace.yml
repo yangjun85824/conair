@@ -1,0 +1,5 @@
+#sleuth配置
+spring:
+  sleuth:
+    sampler:
+      percentage: 1.0

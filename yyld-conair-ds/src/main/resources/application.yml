@@ -1,6 +1,7 @@
 server:
-  port: 4567
-
+  port: 45678
+  servlet:
+    context-path: /ds
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志

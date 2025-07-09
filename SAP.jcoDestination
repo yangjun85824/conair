@@ -1,0 +1,8 @@
+#make connection file
+#Fri Aug 18 11:43:22 CST 2023
+jco.client.lang=ZH
+jco.client.client=669
+jco.client.passwd=Jgdt@2023
+jco.client.user=ZHANGHONGYAO
+jco.client.sysnr=00
+jco.client.ashost=10.110.116.66

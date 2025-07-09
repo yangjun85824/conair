@@ -1,12 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/../../Dev/Maven/repository-yyld/org/springframework/boot/spring-boot-starter-parent/2.4.2/src/main/resources" charset="UTF-8" />
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WEB-CONAIR-SERVER/WEB-CONAIR-SERVER/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WEB-CONAIR-SERVER/WEB-CONAIR-SERVER/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WEB-CONAIR-SERVER/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WEB-CONAIR-SERVER/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-bom/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-bom/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-auto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-auto/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-context/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-context/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-db/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-launch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-launch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-log4j2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-log4j2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-oauth2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-oauth2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-secure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-secure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-tool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-core-tool/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-actuate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-actuate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-api-crypto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-api-crypto/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-cache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-datascope/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-datascope/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-develop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-develop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-ehcache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-ehcache/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-excel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-excel/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-flowable/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-flowable/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-holidays/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-holidays/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-http/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-http/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-jwt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-jwt/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-liteflow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-liteflow/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-loadbalancer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-loadbalancer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-metrics/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-metrics/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-mongo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-mongo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-mybatis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-oss/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-oss/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-powerjob/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-powerjob/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-prometheus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-prometheus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-report/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-report/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-sharding/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-sharding/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-sms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-sms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-social/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-social/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-tenant-dynamic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-tenant-dynamic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-tenant/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-tenant/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-trace/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-trace/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/blade-starter-transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex-tool/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/blade-flow-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/blade-flow-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/blade-resource-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/blade-resource-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-develop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-develop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-flow/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-flow/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-job/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-job/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-report/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-report/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/blade-resource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-ops/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-plugin-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-plugin-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-plugin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-plugin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-desk-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-desk-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-dict-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-dict-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-scope-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-scope-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-system-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-system-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-user-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/blade-user-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/blade-desk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/blade-desk/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/blade-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/blade-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/blade-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blade/bladex/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-online-preview-master/server/src/main/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-online-preview-master/server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-online-preview-master/server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-online-preview-master/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-online-preview-master/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kkfileview/server/src/main/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kkfileview/server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kkfileview/server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kkfileview/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kkfileview/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatisplusgeneratecode" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatisplusgeneratecode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatisplusgeneratecode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/src/main/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web-test/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-commons-packs/src/main/resources" charset="UTF-8" />
@@ -28,9 +187,13 @@
     <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-eureka-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-friend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair-friend/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-pay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-conair-pay/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yyld-conair/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-light4j/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yyld-light4j/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

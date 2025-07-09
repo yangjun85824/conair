@@ -1,12 +1,7 @@
 package com.yyld.conair.commons.data.utils;
 
-import com.alibaba.fastjson.JSONObject;
-import sun.net.www.http.HttpClient;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @ClassName JsapiTicketUtil

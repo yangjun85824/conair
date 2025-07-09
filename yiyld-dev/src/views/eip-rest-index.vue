@@ -49,7 +49,7 @@ const api = proxy.$api;
 
 const ruleForm = ref({
     mothed: 'GET',
-    httpurl: 'http://localhost:4567/users/alist',
+    httpurl: 'http://localhost:45678/users/alist',
     header: '{"Content-Type":"application/json;charset=UTF-8"}',
     params: '{"dsType":"mysql","dbName":"a"}',
 })

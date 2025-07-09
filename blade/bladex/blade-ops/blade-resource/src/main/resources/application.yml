@@ -1,0 +1,23 @@
+#服务器端口
+server:
+  port: 8010
+
+#oss默认配置
+oss:
+  #开启oss配置
+  enabled: true
+  #开启oss类型
+  #minio、s3、qiniu、alioss、huaweiobs、tencentcos
+  name: qiniu
+  #租户模式
+  tenant-mode: true
+  #oss服务地址
+  endpoint: http://prt1thnw3.bkt.clouddn.com
+  #minio转换服务地址，用于内网上传后将返回地址改为转换的外网地址
+  transform-endpoint: http://localhost:9000
+  #访问key
+  access-key: N_Loh1ngBqcJovwiAJqR91Ifj2vgOWHOf8AwBA_h
+  #密钥key
+  secret-key: AuzuA1KHAbkIndCU0dB3Zfii2O3crHNODDmpxHRS
+  #存储桶
+  bucket-name: bladex

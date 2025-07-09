@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualPushChannelMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="pushChannelResultMap" type="org.springblade.modules.visual.pojo.entity.VisualPushChannel">
+        <id column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="push_name" property="pushName"/>
+        <result column="push_type" property="pushType"/>
+        <result column="webhook" property="webhook"/>
+        <result column="robot_sign" property="robotSign"/>
+        <result column="sender_email" property="senderEmail"/>
+        <result column="email_host" property="emailHost"/>
+        <result column="email_port" property="emailPort"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="recipient_email" property="recipientEmail"/>
+        <result column="push_param" property="pushParam"/>
+    </resultMap>
+
+
+</mapper>

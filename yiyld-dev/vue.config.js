@@ -1,4 +1,22 @@
 const { defineConfig } = require('@vue/cli-service')
+
+const BASE_API = "http://localhost:9999"
+module.exports = {
+  pages: {
+    index:{
+      entry: "./src/router/index.js",
+      template: "./src/views/index.vue",
+      filename: "index.html",
+      title: "首页"
+    },
+    dynjava:{
+      entry: "./src/router/dyn-java.js",
+      template: "./src/views/dyn-java.vue",
+      filename: "dyn-java.html",
+      title: "动态java"
+    }
+  }
+}
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false, // 关闭eslint校验
@@ -11,19 +29,25 @@ module.exports = defineConfig({
 		https: false,
     proxy: {
       //和上面自定义的 baseURL 保持一致
-      '/api': {
-        target: 'http://localhost:4567',
+      '/ds': {
+        target: BASE_API,
         changeOrigin: true,
-        pathRewrite: { '^/api': '' },
+        pathRewrite: { '^/': '' },
       },
       //
       '/eapi': {
-        target: 'http://localhost:8003',
+        target: BASE_API,
         changeOrigin: true,
-        pathRewrite: { '^/eapi': '' },
+        pathRewrite: { '^/': '' },
+      },
+      //
+      '/dyn-java': {
+        target: BASE_API,
+        changeOrigin: true,
+        pathRewrite: { '^/': '' },
       }
     }
-  },
+  }
 })
 
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualAiMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualAiResultMap" type="org.springblade.modules.visual.pojo.entity.VisualAi">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="code" property="code"/>
+        <result column="idx" property="idx"/>
+        <result column="name" property="name"/>
+        <result column="temp" property="temp"/>
+        <result column="exam" property="exam"/>
+        <result column="rules" property="rules"/>
+        <result column="placeholder" property="placeholder"/>
+    </resultMap>
+
+</mapper>

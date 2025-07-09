@@ -4,15 +4,16 @@ import com.yyld.conair.commons.data.utils.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 
 @Slf4j
 @EnableOpenApi
 @EnableWebMvc
-@SpringBootApplication(scanBasePackages = {"com.yyld.conair"})
+@ServletComponentScan("com.yyld.conair.ds.servlet")
+@SpringBootApplication(scanBasePackages = {"com.yyld.conair,com.yyld.conair.commons.data,com.yyld.conair.ds"})
 public class YyldConairDsApplication {
 
     public static void main(String[] args) {

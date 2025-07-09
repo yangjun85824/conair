@@ -1,0 +1,32 @@
+#数据源配置
+spring:
+  data:
+    redis:
+      ##redis 单机环境配置
+      ##将docker脚本部署的redis服务映射为宿主机ip
+      ##生产环境推荐使用阿里云高可用redis服务并设置密码
+      host: 10.125.238.198
+      port: 6379
+      password: LcCw@redis#6379
+      database: 0
+      ssl:
+        enabled: false
+      ##redis 集群环境配置
+      #cluster:
+      #  nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+      #  commandTimeout: 5000
+  datasource:
+#    url: jdbc:mysql://localhost:3306/blade?allowMultiQueries=true&useUnicode=truecharacterEncoding=utf-8
+#    username: root
+#    password: root
+    url: jdbc:mysql://10.125.238.203:3306/be_system?allowMultiQueries=true&useUnicode=truecharacterEncoding=utf-8
+    username: dbadmin
+    password: ServiceAdmin_1
+
+blade:
+  ##大屏配置
+  visual:
+    #限流白名单
+    white-list:
+      - 127.0.0.1
+      - 192.168.0.1

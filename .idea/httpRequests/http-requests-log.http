@@ -1,0 +1,55 @@
+POST http://localhost:5200/visual/put-file
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-09-05T115642.500.json
+
+###
+
+GET http://localhost:8051/version/list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-08-12T174446.400.json
+
+###
+
+GET http://localhost:8051/db/db-list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-08-12T174446-1.500.json
+
+###
+
+GET http://localhost:8051/category/detail
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-08-12T174446.500.json
+
+###
+
+GET http://localhost:8051/db/db-list
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-08-12T174424.500.json
+
+###
+
+GET http://localhost:8051/category/detail
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-08-12T174408.500.json
+
+###
+

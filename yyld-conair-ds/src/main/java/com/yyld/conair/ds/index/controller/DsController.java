@@ -3,31 +3,13 @@ package com.yyld.conair.ds.index.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yyld.conair.commons.data.result.APIResult;
-import com.yyld.conair.commons.data.utils.SpringContextUtil;
-import com.yyld.conair.druid.config.DataSourceContext;
 import com.yyld.conair.druid.consts.DSConsts;
 import com.yyld.conair.druid.entity.DataSourceInfoEntity;
 import com.yyld.conair.druid.utils.DataSourceUtil;
 import com.yyld.conair.ds.index.service.DSService;
-import com.yyld.conair.ds.test.entity.Ls;
-import com.yyld.conair.ds.test.service.CService;
-import com.yyld.conair.ds.test.service.LsService;
-import com.yyld.conair.ds.test.service.impl.LsServiceImpl;
-import com.yyld.conair.ds.users.entity.Users;
-import com.yyld.conair.ds.users.service.UsersService;
-import com.yyld.conair.ds.utils.CutPictureUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,7 +44,7 @@ public class DsController {
 
     //测试数据源连接是否成功
     @PostMapping("/jdbctest")
-    public APIResult<Void> jdbctest(DataSourceInfoEntity entity) {
+    public APIResult<Void> jdbctest(@RequestBody DataSourceInfoEntity entity) {
 
         String  result = dsService.jdbctest(entity);
 
@@ -76,7 +58,7 @@ public class DsController {
 
     //测试数据源连接是否成功
     @PostMapping("/addDs")
-    public APIResult<Void> addDs(DataSourceInfoEntity entity) {
+    public APIResult<Void> addDs(@RequestBody DataSourceInfoEntity entity) {
 
         Map<Object,Object> dsMap = DataSourceUtil.dataSourceMap;
 

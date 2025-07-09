@@ -1,0 +1,216 @@
+#服务器配置
+server:
+  undertow:
+    threads:
+      # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+      io: 16
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+      worker: 400
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    buffer-size: 1024
+    # 是否分配的直接内存
+    direct-buffers: true
+
+#spring配置
+spring:
+  cloud:
+    nacos:
+      discovery:
+        # 禁用云命名空间解析,防止和云平台环境变量冲突
+        isUseCloudNamespaceParsing: false
+      config:
+        # 禁用云命名空间解析,防止和云平台环境变量冲突
+        isUseCloudNamespaceParsing: false
+    sentinel:
+      eager: true
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
+    livereload:
+      port: 23333
+
+#feign配置
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+
+#对外暴露端口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+#springdoc-openapi配置
+springdoc:
+  default-flat-param-object: true
+
+#knife4j配置
+knife4j:
+  #启用
+  enable: true
+  #基础认证
+  basic:
+    enable: false
+    username: blade
+    password: blade
+  #增强配置
+  setting:
+    enableSwaggerModels: true
+    enableDocumentManage: true
+    enableHost: false
+    enableHostText: http://localhost
+    enableRequestCache: true
+    enableFilterMultipartApis: false
+    enableFilterMultipartApiMethodType: POST
+    language: zh_cn
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: Copyright © 2024 BladeX All Rights Reserved
+
+#swagger公共信息
+swagger:
+  title: BladeX 接口文档系统
+  description: BladeX 接口文档系统
+  version: 4.1.0.RELEASE
+  license: Powered By BladeX
+  license-url: https://bladex.cn
+  terms-of-service-url: https://bladex.cn
+  contact:
+    name: 翼宿
+    email: bladejava@qq.com
+    url: https://gitee.com/smallc
+
+#blade配置
+blade:
+  #oauth2配置
+  oauth2:
+    #启用 oauth2
+    enabled: true
+    #使用 @org.springblade.test.Sm2KeyGenerator 获取,用于国密sm2验签,需和前端保持一致
+    public-key: 请配置sm2公钥
+    #使用 @org.springblade.test.Sm2KeyGenerator 获取,用于国密sm2解密,前端无需配置
+    private-key: 请配置sm2私钥
+  #token配置
+  token:
+    #是否有状态
+    state: false
+    #是否单用户登录
+    single: false
+    #单用户登录范围
+    single-level: all
+    #token签名 使用blade-auth服务 @org.springblade.test.SignKeyGenerator 获取
+    sign-key: 请配置32位签名
+    #token加密 使用blade-auth服务 @org.springblade.test.CryptoKeyGenerator 获取
+    crypto-key: 请配置cryptoKey
+  #接口配置
+  api:
+    #报文加密配置
+    crypto:
+      #启用报文加密配置
+      enabled: false
+      #使用blade-auth服务 @org.springblade.test.CryptoKeyGenerator 获取,需和前端保持一致
+      aes-key: 请配置aesKey
+      #使用blade-auth服务 @org.springblade.test.CryptoKeyGenerator 获取,需和前端保持一致
+      des-key: 请配置desKey
+  #jackson配置
+  jackson:
+    #null自动转空值
+    null-to-empty: true
+    #大数字自动转字符串
+    big-num-to-string: true
+    #支持text文本请求,与报文加密同时开启
+    support-text-plain: false
+  #redis序列化方式
+  redis:
+    serializer-type: protostuff
+  #日志配置
+  log:
+    request:
+      #开启控制台请求日志
+      enabled: true
+      #控制台请求日志忽略
+      skip-url:
+        - /blade-desk/notice/list
+        - /blade-chat/weixin/**
+      #开启错误日志入库
+      error-log: true
+  #xss配置
+  xss:
+    enabled: true
+    skip-url:
+      - /weixin
+      - /notice/submit
+      - /model/submit
+      - /datasource/submit
+  #安全框架配置
+  secure:
+    #严格模式
+    #缺失令牌字段则取消授权
+    strict-token: true
+    #缺失请求头则取消授权
+    strict-header: true
+    #接口放行
+    skip-url:
+      - /test/**
+    #授权认证配置
+    auth:
+      - method: ALL
+        pattern: /chat/wechat/**
+        expression: "hasAuth()"
+      - method: ALL
+        pattern: /chat/qq/**
+        expression: "hasStrictToken()"
+      - method: ALL
+        pattern: /chat/ding/**
+        expression: "hasStrictHeader()"
+      - method: POST
+        pattern: /dashboard/upload
+        expression: "hasTimeAuth(9, 17)"
+      - method: POST
+        pattern: /dashboard/submit
+        expression: "hasAnyRole('administrator', 'admin', 'user')"
+    #基础认证配置
+    basic:
+      - method: ALL
+        pattern: /dashboard/info
+        username: "blade"
+        password: "blade"
+    #动态签名认证配置
+    sign:
+      - method: ALL
+        pattern: /dashboard/sign
+        crypto: "sha1"
+    #多终端认证配置
+    client:
+      - client-id: sword
+        path-patterns:
+          - /sword/**
+      - client-id: saber
+        path-patterns:
+          - /saber/**
+  #多租户配置
+  tenant:
+    #多租户增强
+    enhance: true
+    #多租户授权保护
+    license: false
+    #动态数据源功能
+    dynamic-datasource: false
+    #动态数据源全局扫描
+    dynamic-global: false
+    #多租户字段名
+    column: tenant_id
+    #排除多租户逻辑
+    exclude-tables:
+      - blade_user
+  #分库分表配置
+  sharding:
+    enabled: false

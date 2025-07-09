@@ -1,0 +1,386 @@
+<template>
+  <basic-container>
+    <div class="avue-crud">
+      <el-row :hidden="!search" style="padding:6px 18px">
+        <!-- 查询模块 -->
+        <el-form :inline="true" :model="query">
+          #for(x in prototypes) {
+          #if(x.isQuery==1){
+          <el-form-item label="${x.jdbcComment!}:">
+            <el-input v-model="query.${x.propertyName!}" placeholder="请输入${x.jdbcComment!}"></el-input>
+          </el-form-item>
+          #}
+          #}
+          <!-- 查询按钮 -->
+          <el-form-item>
+            <el-button type="primary" icon="el-icon-search" @click="searchChange">搜 索</el-button>
+            <el-button icon="el-icon-delete" @click="searchReset()">清 空</el-button>
+          </el-form-item>
+        </el-form>
+      </el-row>
+      <el-row>
+        <div class="avue-crud__header">
+          <!-- 头部左侧按钮模块 -->
+          <div class="avue-crud__left">
+            <el-button v-if="this.permissionList.addBtn" type="primary" icon="el-icon-plus" @click="handleAdd">新 增</el-button>
+            <el-button v-if="this.permissionList.delBtn" type="danger" icon="el-icon-delete" @click="handleDelete" plain>删 除</el-button>
+          </div>
+          <!-- 头部右侧按钮模块 -->
+          <div class="avue-crud__right">
+            <el-button icon="el-icon-refresh" @click="searchChange" circle></el-button>
+            <el-button icon="el-icon-search" @click="searchHide" circle></el-button>
+          </div>
+        </div>
+      </el-row>
+      <el-row>
+        <!-- 列表模块 -->
+        <el-table ref="table" v-loading="loading"
+                  @selection-change="selectionChange"
+                  :data="data"
+                  :height="height"
+                  style="width: 100%"
+                  :border="option.border">
+          <el-table-column type="selection" v-if="option.selection" width="55" align="center"></el-table-column>
+          <el-table-column type="expand" v-if="option.expand" align="center"></el-table-column>
+          <el-table-column v-if="option.index" label="\#" type="index" width="50" align="center">
+          </el-table-column>
+          <template v-for="(item,index) in option.column">
+            <!-- table字段 -->
+            <el-table-column v-if="item.hide!==true"
+                             :prop="item.prop"
+                             :label="item.label"
+                             :width="item.width"
+                             :key="index">
+            </el-table-column>
+          </template>
+          <!-- 操作栏模块 -->
+          <el-table-column prop="menu" label="操作" :width="220" align="center">
+            <template \#="{row}">
+              <el-button v-if="this.permissionList.viewBtn" type="primary" text icon="el-icon-view" @click="handleView(row)">查看</el-button>
+              <el-button v-if="this.permissionList.editBtn" type="primary" text icon="el-icon-edit" @click="handleEdit(row)">编辑</el-button>
+              <el-button v-if="this.permissionList.delBtn" type="primary" text icon="el-icon-delete" @click="rowDel(row)">删除</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+      </el-row>
+      <el-row>
+        <div class="avue-crud__pagination" style="width:100%">
+          <!-- 分页模块 -->
+          <el-pagination align="right"
+                         background
+                         @size-change="sizeChange"
+                         @current-change="currentChange"
+                         :current-page="page.currentPage"
+                         :page-sizes="[10, 20, 30, 40, 50, 100]"
+                         :page-size="page.pageSize"
+                         layout="total, sizes, prev, pager, next, jumper"
+                         :total="page.total">
+          </el-pagination>
+        </div>
+      </el-row>
+      <!-- 表单模块 -->
+      <el-dialog :title="title"
+                 v-model="box"
+                 width="50%"
+                 :before-close="beforeClose"
+                 append-to-body>
+        <el-form :disabled="view" ref="form" :model="form" label-width="80px">
+          <!-- 表单字段 -->
+          #for(x in prototypes) {
+          #if(x.isForm!=0){
+          #if(x.componentType=="input"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-input v-model="form.${x.propertyName!}" placeholder="请输入${x.jdbcComment!}"/>
+          </el-form-item>
+          #}else if(x.componentType=="textarea"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-input type="textarea" :rows="5" v-model="form.${x.propertyName!}" placeholder="请输入${x.jdbcComment!}"/>
+          </el-form-item>
+          #}else if(x.componentType=="select"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-select v-model="form.${x.propertyName!}" clearable placeholder="请选择${x.jdbcComment!}">
+              <el-option
+                v-for="item in ${x.propertyName!}Data"
+                :key="item.dictKey"
+                :label="item.dictValue"
+                :value="item.dictKey">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          #}else if(x.componentType=="tree"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-select v-model="form.${x.propertyName!}" clearable placeholder="请选择${x.jdbcComment!}">
+              <el-option
+                v-for="item in ${x.propertyName!}Data"
+                :key="item.dictKey"
+                :label="item.dictValue"
+                :value="item.dictKey">
+              </el-option>
+            </el-select>
+          </el-form-item>
+          #}else if(x.componentType=="radio"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-radio-group v-model="form.${x.propertyName!}">
+              <el-radio v-for="(item,index) in ${x.propertyName!}Data" :key="index" :label="item.dictKey">
+                {{item.dictValue}}
+              </el-radio>
+            </el-radio-group>
+          </el-form-item>
+          #}else if(x.componentType=="checkbox"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-checkbox-group v-model="form.${x.propertyName!}">
+              <el-checkbox v-for="(item,index) in ${x.propertyName!}Data" :label="item.dictValue" :key="index">{{item.dictValue}}</el-checkbox>
+            </el-checkbox-group>
+          </el-form-item>
+          #}else if(x.componentType=="switch"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-switch v-model="form.${x.propertyName!}" </el-switch>
+          </el-form-item>
+          #}else if(x.componentType=="date"){
+          <el-form-item label="${x.jdbcComment!}" prop="${x.propertyName!}">
+            <el-date-picker v-model="form.${x.propertyName!}" type="datetime" value-format="YYYY-MM-DD HH:mm:ss" placeholder="请选择${x.jdbcComment!}"></el-date-picker>
+          </el-form-item>
+          #}
+          #}
+          #}
+        </el-form>
+        <!-- 表单按钮 -->
+        <template \#footer>
+          <span v-if="!view" class="dialog-footer">
+            <el-button type="primary" icon="el-icon-circle-check" @click="handleSubmit">提 交</el-button>
+            <el-button icon="el-icon-circle-close" @click="box = false">取 消</el-button>
+          </span>
+        </template>
+      </el-dialog>
+    </div>
+  </basic-container>
+</template>
+
+<script>
+import { getList, getDetail, add, update, remove } from "@/api/${serviceCode!}/${modelCode!}";
+import option from "@/option/${serviceCode!}/${modelCode!}";
+import { mapGetters } from "vuex";
+#for(x in prototypes) {
+      #if(isNotEmpty(x.dictCode)){
+import {getDictionary} from '@/api/system/dict';
+       #break;
+          #}
+      #}
+
+export default {
+  data () {
+    return {
+      height: 0,
+      // 弹框标题
+      title: '',
+      // 是否展示弹框
+      box: false,
+      // 是否显示查询
+      search: true,
+      // 加载中
+      loading: true,
+      // 是否为查看模式
+      view: false,
+      // 查询信息
+      query: {},
+      // 分页信息
+      page: {
+        currentPage: 1,
+        pageSize: 10,
+        total: 40
+      },
+      // 表单数据
+      form: {},
+      // 选择行
+      selectionList: [],
+      // 表单配置
+      option: option,
+      // 表单列表
+      data: [],
+    #for(x in prototypes) {
+      #if(isNotEmpty(x.dictCode)){
+      // ${x.jdbcComment!}字典数据
+      ${x.propertyName!}Data: [],
+          #}
+      #}
+    }
+  },
+  mounted() {
+    this.init();
+    this.onLoad(this.page);
+  },
+  computed: {
+    ...mapGetters(["permission"]),
+    permissionList() {
+      return {
+        addBtn: this.validData(this.permission.param_add, false),
+        viewBtn: this.validData(this.permission.param_view, false),
+        delBtn: this.validData(this.permission.param_delete, false),
+        editBtn: this.validData(this.permission.param_edit, false),
+      };
+    },
+    ids() {
+      let ids = [];
+      this.selectionList.forEach(ele => {
+        ids.push(ele.id);
+      });
+      return ids.join(",");
+    }
+  },
+  methods: {
+    init() {
+      this.height = this.setPx(document.body.clientHeight - 340);
+      #for(x in prototypes) {
+        #if(isNotEmpty(x.dictCode)){
+      getDictionary({code: '${x.dictCode!}'}).then(res => {
+        this.${x.propertyName!}Data = res.data.data;
+      });
+          #}
+        #}
+    },
+    searchHide() {
+      this.search = !this.search;
+    },
+    searchChange() {
+      this.onLoad(this.page);
+    },
+    searchReset() {
+      this.query = {};
+      this.page.currentPage = 1;
+      this.onLoad(this.page);
+    },
+    handleSubmit() {
+      if (!this.form.id) {
+        add(this.form).then(() => {
+          this.box = false;
+          this.onLoad(this.page);
+          this.$message({
+            type: "success",
+            message: "操作成功!"
+          });
+        });
+      } else {
+        update(this.form).then(() => {
+          this.box = false;
+          this.onLoad(this.page);
+          this.$message({
+            type: "success",
+            message: "操作成功!"
+          });
+        })
+      }
+    },
+    handleAdd(){
+      this.title = '新增'
+      this.form = {}
+      this.box = true
+    },
+    handleEdit(row) {
+      this.title = '编辑'
+      this.box = true
+      getDetail(row.id).then(res => {
+        this.form = res.data.data;
+        #for(x in prototypes) {
+          #if(isNotEmpty(x.dictCode)){
+        this.form.${x.propertyName!} = this.form.${x.propertyName!}.toString();
+              #}
+          #}
+      });
+    },
+    handleView(row) {
+      this.title = '查看'
+      this.view = true;
+      this.box = true;
+      getDetail(row.id).then(res => {
+        this.form = res.data.data;
+      });
+    },
+    handleDelete() {
+      if (this.selectionList.length === 0) {
+        this.$message.warning("请选择至少一条数据");
+        return;
+      }
+      this.$confirm("确定将选择数据删除?", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          return remove(this.ids);
+        })
+        .then(() => {
+          this.selectionClear();
+          this.onLoad(this.page);
+          this.$message({
+            type: "success",
+            message: "操作成功!"
+          });
+        });
+    },
+    rowDel(row) {
+      this.$confirm("确定将选择数据删除?", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          return remove(row.id);
+        })
+        .then(() => {
+          this.onLoad(this.page);
+          this.$message({
+            type: "success",
+            message: "操作成功!"
+          });
+        });
+    },
+    beforeClose (done) {
+      done()
+      this.form = {};
+      this.view = false;
+    },
+    selectionChange(list) {
+      this.selectionList = list;
+    },
+    selectionClear() {
+      this.selectionList = [];
+      this.$refs.table.clearSelection();
+    },
+    currentChange(currentPage) {
+      this.page.currentPage = currentPage;
+      this.onLoad(this.page);
+    },
+    sizeChange(pageSize) {
+      this.page.pageSize = pageSize;
+      this.onLoad(this.page);
+    },
+    onLoad(page, params = {}) {
+      this.loading = true;
+
+      const {
+      #for(x in prototypes) {
+       #if(x.isQuery==1){
+        ${x.propertyName!},
+       #}
+      #}
+      } = this.query;
+
+      let values = {
+      #for(x in prototypes) {
+       #if(x.isQuery==1){
+        ${x.propertyName!}_${x.queryType!}: ${x.propertyName!},
+       #}
+      #}
+      };
+
+      getList(page.currentPage, page.pageSize, values).then(res => {
+        const data = res.data.data;
+        this.page.total = data.total;
+        this.data = data.records;
+        this.loading = false;
+        this.selectionClear();
+      });
+    }
+  }
+};
+</script>

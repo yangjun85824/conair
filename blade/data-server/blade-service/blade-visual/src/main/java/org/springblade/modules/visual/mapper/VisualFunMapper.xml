@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualFunMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualFunResultMap" type="org.springblade.modules.visual.pojo.entity.VisualFun">
+        <result column="id" property="id"/>
+        <result column="is_deleted" property="isDeleted"/>
+        <result column="name" property="name"/>
+        <result column="type" property="type"/>
+        <result column="content" property="content"/>
+    </resultMap>
+
+
+    <select id="selectVisualFunPage" resultMap="visualFunResultMap">
+        select * from blade_visual_fun where is_deleted = 0
+    </select>
+
+</mapper>

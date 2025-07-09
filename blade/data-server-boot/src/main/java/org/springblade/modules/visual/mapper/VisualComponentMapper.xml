@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.springblade.modules.visual.mapper.VisualComponentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="visualComponentResultMap" type="org.springblade.modules.visual.pojo.dto.VisualComponentDTO">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="img" property="img"/>
+        <result column="type" property="type"/>
+    </resultMap>
+
+
+    <select id="selectVisualComponentPage" resultMap="visualComponentResultMap">
+        select id, name, img, type from blade_visual_component
+        <where>
+            <if test="visualComponent.type!=null">
+                and type = #{visualComponent.type}
+            </if>
+        </where>
+    </select>
+
+</mapper>
